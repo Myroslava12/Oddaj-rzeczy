@@ -3,19 +3,25 @@
     margin: 0 auto;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1299px) {
     .container--home {
         max-width: 1200px;
     }
 }
 
-@media (max-width: 1600px) {
+@media (min-width: 1300px) and (max-width: 1459px) {
     .container--home {
         max-width: 1400px;
     }
 }
 
-@media (max-width: 1800px) {
+@media (min-width: 1460px) and (max-width: 1699px) {
+    .container--home {
+        max-width: 1400px;
+    }
+}
+
+@media (min-width: 1700px) and (max-width: 1800px) {
     .container--home {
         max-width: 1600px;
     }

@@ -1,8 +1,33 @@
 @import "../scss/settings/reset";
 @import "../scss/settings/fonts";
 @import "../scss/settings/colors";
+@import "../components/Home/home";
+@import "../components/Home/Navigation/navigation";
+@import "../components/Home/ThreeColumns/threeColumns";
+@import "../components/Home/AboutUs/aboutUs";
+@import "../components/Home/FourSteps/fourSteps";
+@import "../components/Home/WhoWeHelp/whoWeHelp";
+@import "../components/Home/Header/header";
+@import "../components/Home/Contact/contact";
+@import "../components/Register/register";
+@import "../components/LogIn/login";
+@import "../components/LogOut/logout";
+@import "../components/LoggedIn/loggedIn";
 
+html {
+  font-size: 10px;
+  box-sizing: border-box;
+}
 
 body {
   font-family: $font-base;
+  background-color: $whiteColor;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1299px) {
+  html {
+    font-size: 8px;
+  }
 }

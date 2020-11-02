@@ -1,0 +1,71 @@
+.header--box {
+    display: flex;
+    height: calc(100vh - 12.4rem);
+    width: 100%;
+}
+
+.header--bg--img {
+    width: 50%;
+    height: 100vh;
+    background-image: url(../../../assets/Home-Hero-Image.jpg);
+    background-position: center right;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.header--section {
+    text-align: center;
+    width: 50%;
+    height: 100%;
+    display: block;
+    margin: 0 0 0 auto;
+    
+    h1, div, img {
+        position: relative;
+        top: 25%;
+        transform: translateY(-25%);
+    }
+}
+
+.header--title {
+    font-size: 3.8rem;
+    line-height: 5.5rem;
+    color: $darkColor;
+}
+
+.header--img {
+    margin: 2.5rem 0 6.5rem 0;
+}
+
+.header--links--box {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+
+.header--link div {
+    font-size: 3.6rem;
+    line-height: 4.5rem;
+    color: $darkColor;
+    width: 90%;
+    border: .75px solid $darkColor;
+    text-decoration: none;
+    
+    span {
+        display: inline-block;
+    }
+}
+
+.link--give div {
+    margin-right: 2.5rem;
+    padding: 1.3rem 5rem;
+}
+
+.link--organize div {
+    padding: 1.3rem 3.81rem;
+}
