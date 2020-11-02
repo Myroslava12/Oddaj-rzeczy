@@ -1,0 +1,39 @@
+.section--three--columns {
+    width: 100%;
+    background-color: $yellowColor;
+
+    .container--home {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.section--one--column {
+    flex-basis: 30%;
+    text-align: center;
+    padding: 4.6rem 0 8.6rem 0;
+}
+
+.one--column--number {
+    font-size: 9rem;
+    line-height: 12.2rem;
+    color: $darkYellowColor;
+}
+
+.one--column--title {
+    font-size: 1.8rem;
+    line-height: 3rem;
+    color: $darkColor;
+    text-transform: uppercase;
+    margin-bottom: 2.8rem;
+}
+
+.one--column--text {
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    color: $darkColor;
+    font-family: $font-alt;
+    font-weight: 300;
+}
