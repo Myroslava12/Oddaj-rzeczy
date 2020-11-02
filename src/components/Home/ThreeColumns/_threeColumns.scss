@@ -1,6 +1,8 @@
 .section--three--columns {
     width: 100%;
-    background-color: $yellowColor;
+    background-image: url(../../../assets/bg-3-columns.png);
+    background-position: center;
+    background-size: cover;
 
     .container--home {
         width: 100%;
