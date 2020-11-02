@@ -1,4 +1,6 @@
 import React from "react";
+import {Link} from 'react-router-dom';
+import * as ROUTES from "../../../constants/routes";
 import decoration from "../../../assets/Decoration.svg";
 
 const Header = () => {
@@ -10,8 +12,8 @@ const Header = () => {
                 <h1 className="header--title">Oddaj niechciane rzeczy w zaufane ręce</h1>
                 <img src={decoration} alt="decoration" />
                 <div className="header--links--box">
-                    <button className="header--link link--give">Oddaj rzeczy</button>
-                    <button className="header--link link--organize">Zorganizuj zbiórkę</button>
+                    <Link to={ROUTES.LOG_IN} className="header--link link--give">Oddaj rzeczy</Link>
+                    <Link to={ROUTES.LOG_IN} className="header--link link--organize">Zorganizuj zbiórkę</Link>
                 </div>
             </div>      
         </div>

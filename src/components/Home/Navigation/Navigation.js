@@ -1,13 +1,14 @@
 import React from "react";
-import {NavLink, HashRouter as Router} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
+import * as ROUTES from '../../../constants/routes';
 import {Link} from "react-scroll";
 
 const Navigation = () => {
     return (
         <nav className="nav--box">
             <ul className="nav--links">
-                <li><NavLink exact to="/login">Zaloguj</NavLink></li>
-                <li><NavLink to="/register" ClassName="active--link">Załóż konto</NavLink></li>
+                <li><NavLink exact to={ROUTES.LOG_IN} >Zaloguj</NavLink></li>
+                <li><NavLink to={ROUTES.REGISTER} ClassName="active--link">Załóż konto</NavLink></li>
             </ul>
             <ul className="nav--links">
                 <li><Link to="home" smooth={true} duration={100}>Start</Link></li>
