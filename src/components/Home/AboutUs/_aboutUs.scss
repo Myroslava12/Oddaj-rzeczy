@@ -1,0 +1,43 @@
+.section--about--us {
+    width: 100%;
+    background-color: $whiteColor;
+    display: flex;
+}
+
+.about--us--info--box {
+    flex-basis: 50%;
+    box-sizing: border-box;
+    padding: 18rem;
+    text-align: center;
+    color: $darkColor;
+    position: relative;
+}
+
+.about--us--title {
+    font-size: 3.8rem;
+    line-height: 5.5rem;
+    text-transform: uppercase;
+}
+
+.about--us--img {
+    margin: 2.6rem 0 5.5rem 0;
+}
+
+.about--us--text {
+    font-size: 3rem;
+    line-height: 5.4rem;
+}
+
+.about--us--signature {
+    margin-top: 4rem;
+    position: absolute;
+    right: 20%;
+}
+
+.about--us--bg--img {
+    flex-basis: 50%;
+    height: 93rem;
+    background-image: url(../../../assets/People.jpg);
+    background-size: cover;
+    background-position: center;
+}

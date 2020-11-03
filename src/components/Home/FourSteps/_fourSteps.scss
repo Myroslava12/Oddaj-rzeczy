@@ -1,0 +1,89 @@
+.section--four--steps {
+    width: 100%;
+    text-align: center;
+    margin: 5.5rem 0 8.8rem 0;
+
+    .four--steps--link div {
+        width: 20%;
+        margin: 0 auto;
+        display: block;
+        padding: 1.3rem 2rem;
+    }
+}
+
+.four--steps--title {
+    font-size: 3.8rem;
+    line-height: 5.5rem;
+    color: $darkColor;
+    margin-bottom: 2.4rem;
+}
+
+.four--steps--box {
+    width: 100%;
+    background-color: $whiteColor;
+    margin: 3.4rem 0 3.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 6.2rem 0 7.3rem 0;
+
+    .first--img {
+        background-image: url(../../../assets/Icon-1.svg);
+    }
+
+    .second--img {
+        background-image: url(../../../assets/Icon-2.svg);
+    }
+
+    .third--img {
+        background-image: url(../../../assets/Icon-3.svg);
+    }
+
+    .fourth--img {
+        background-image: url(../../../assets/Icon-4.svg);
+    }
+}
+
+.one-step--box {
+    flex-basis: 25%;
+}
+
+.one--step--img {
+    width: 8.3rem;
+    height: 8.3rem;
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+}
+
+.one--step--title {
+    margin: 1rem 0 3rem 0;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    color: $darkColor;
+    height: 3.4rem;
+
+    
+}
+
+.one--step--text {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: $darkColor;
+    width: 70%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &::before{
+        position: absolute;
+        content: '';
+        width: 7rem;
+        height: 1px;
+        margin-bottom: 1rem;
+        background-color: #707070;
+        top: -1rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

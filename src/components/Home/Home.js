@@ -1,7 +1,9 @@
 import React from "react";
-import Header from "./Header/Header";
-import Navigation from "./Navigation/Navigation";
-import ThreeColumns from "./ThreeColumns/ThreeColumns";
+import Header from "./Header";
+import Navigation from "./Navigation";
+import ThreeColumns from "./ThreeColumns";
+import FourSteps from "./FourSteps";
+import AboutUs from "./AboutUs";
 
 const Home = () => {
     return (
@@ -11,6 +13,8 @@ const Home = () => {
                 <Header />
             </div>
             <ThreeColumns />
+            <FourSteps />
+            <AboutUs />
         </div>
     );
 }
