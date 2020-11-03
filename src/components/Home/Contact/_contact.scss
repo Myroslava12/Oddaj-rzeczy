@@ -1,0 +1,147 @@
+.section--contact {
+    width: 100%;
+    height: 95rem;
+    background-image: url(../../../assets/Background-Contact-Form.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    
+    .container--home {
+        position: relative;
+        height: 100%;
+    }
+
+    &::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: #FFFFFFC9 0% 0% no-repeat padding-box;
+    }
+}
+
+.contact--form {
+    position: absolute;
+    z-index: 2;
+    margin: 0 0 0 auto;
+    text-align: center;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40%;
+}
+
+.contact--title {
+    font-size: 3.8rem;
+    line-height: 5.5rem;
+    color: $darkColor;
+    text-align: center;
+}
+
+.contact--img {
+    margin: 3.1rem 0 8rem 0;
+}
+
+.data--user--box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+}
+
+.contact--form--label {
+    flex-basis: 47%;
+    text-align: left;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    color: $darkColor;
+    font-weight: 600;
+}
+
+.contact--form--input {
+    display: block;
+    width: 100%;
+    border: 0;
+    outline: none;
+    border-bottom: 1px solid #707070;
+    background-color: transparent;
+    padding: 1.5rem 0 .6rem 0;
+
+    &::placeholder {
+        color: #3C3C3C26;
+        font-size: 1.8rem;
+    }
+}
+
+.contact--form--textarea {
+    width: 100%;
+    height: 10.1rem;
+    resize: none;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    border-bottom: 1px solid #707070;
+    padding: 1.5rem 0 .6rem 0;
+    margin-bottom: 4.4rem;
+
+    &::placeholder {
+        color: #3C3C3C26;
+        font-size: 1.8rem;
+    }
+}
+
+.contact--label--textarea {
+    display: block;
+    text-align: left;
+}
+
+.contact--form--submit {
+    display: block;
+    margin: 0 0 0 auto;
+    outline: none;
+    border: .75px solid $darkColor;
+    padding: 1.3rem 5.2rem;
+    background-color: transparent;
+    color: $darkColor;
+    font-size: 1.8rem;
+}
+
+.contact--footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2.2rem;
+}
+
+.footer--copyright {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    color: $darkColor;
+}
+
+.footer--icons {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+
+    .footer--icon {
+        width: 3rem;
+        height: 3rem;
+        background-position: center;
+        background-size: cover;
+        cursor: pointer;
+    }
+}
+
+.footer--icon--fb {
+    margin-right: 2rem;
+    background-image: url(../../../assets/Facebook.svg);
+}
+
+.footer--icon--in {
+    background-image: url(../../../assets/Instagram.svg);
+}
