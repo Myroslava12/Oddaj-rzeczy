@@ -2,10 +2,10 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import * as ROUTES from '../constants/routes';
 import Home from "./Home";
-import Login from "./LogIn";
+import LogIn from "./LogIn";
 import Register from "./Register";
 import LoggedIn from "./LoggedIn";
-import Logout from "./LogOut";
+import LogOut from "./LogOut";
 
 const App = () => {
   return (
@@ -13,10 +13,10 @@ const App = () => {
       <Router>
         <Switch>
           <Route exact path={ROUTES.HOME} component={Home}/>
-          <Route path={ROUTES.LOG_IN} component={Login}/>
+          <Route path={ROUTES.LOG_IN} component={LogIn}/>
           <Route path={ROUTES.REGISTER} component={Register}/>
           <Route path={ROUTES.LOGGED_IN} component={LoggedIn}/>
-          <Route path={ROUTES.LOG_OUT} component={Logout}/>
+          <Route path={ROUTES.LOG_OUT} component={LogOut}/>
         </Switch>
       </Router>
     </>
