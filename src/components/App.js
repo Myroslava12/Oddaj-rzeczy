@@ -1,11 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import * as ROUTES from '../constants/routes';
-import Home from "./Home/Home";
-import Login from "./LogIn/LogIn";
-import Register from "./Register/Register";
-import LoggedIn from "./LoggedIn/LoggedIn";
-import Logout from "./LogOut/LogOut";
+import Home from "./Home";
+import Login from "./LogIn";
+import Register from "./Register";
+import LoggedIn from "./LoggedIn";
+import Logout from "./LogOut";
 
 const App = () => {
   return (
