@@ -329,6 +329,61 @@ button, a, input, textarea {
           transform: translateX(-50%);
 }
 
+.we--help--text {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.section--we--help {
+  width: 100%;
+  margin-top: 7rem;
+  text-align: center;
+}
+
+.we--help--title {
+  font-size: 3.8rem;
+  line-height: 5.5rem;
+  color: #3C3C3C;
+}
+
+.we--help--img {
+  margin: 2.5rem 0 6.2rem 0;
+}
+
+.we--help--box {
+  width: 100%;
+}
+
+.we--help--btn--box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.we--help--btn {
+  outline: none;
+  padding: 1.1rem 5.5rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  color: #3C3C3C;
+  background-color: transparent;
+  border: 0;
+}
+
+.active--btn {
+  border: 1px solid #3C3C3C;
+}
+
 .header--box {
   display: -webkit-box;
   display: -ms-flexbox;

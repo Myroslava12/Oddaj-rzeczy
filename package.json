@@ -14,8 +14,8 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
     "react-scroll": "^1.8.1",
-    "web-vitals": "^0.2.4",
-    "serve": "^11.3.2"
+    "serve": "^11.3.2",
+    "web-vitals": "^0.2.4"
   },
   "scripts": {
     "start": "serve build",
@@ -42,5 +42,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "firestore-export-import": "^0.8.0"
   }
 }

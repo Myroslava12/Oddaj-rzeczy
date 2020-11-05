@@ -5,6 +5,7 @@ import ThreeColumns from "./ThreeColumns";
 import FourSteps from "./FourSteps";
 import AboutUs from "./AboutUs";
 import Contact from "./Contact";
+import WhoWeHelp from './WhoWeHelp';
 
 const Home = () => {
     return (
@@ -16,6 +17,7 @@ const Home = () => {
             <ThreeColumns />
             <FourSteps />
             <AboutUs />
+            <WhoWeHelp />
             <Contact />
         </div>
     );

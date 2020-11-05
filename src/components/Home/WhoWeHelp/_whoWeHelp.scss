@@ -1,0 +1,111 @@
+.we--help--text {
+    display: none;
+}
+.active {
+    display: block;
+}
+
+.section--we--help {
+    width: 100%;
+    margin-top: 7rem;
+    text-align: center;
+}
+
+.we--help--title {
+    font-size: 3.8rem;
+    line-height: 5.5rem;
+    color: $darkColor;
+}
+
+.we--help--img {
+    margin: 2.5rem 0 6.2rem 0;
+}
+
+.we--help--box {
+    width: 100%;
+}
+
+.we--help--btn--box {
+    display: flex;
+    justify-content: space-evenly;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.we--help--btn {
+    outline: none;
+    padding: 1.1rem 5.5rem;
+    box-sizing: border-box;
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+    color: $darkColor;
+    background-color: transparent;
+    border: 0;
+    width: 25%;
+    text-align: center;
+}
+
+.we--help--text {
+    margin: 7rem auto 6.6rem auto;
+    font-size: 2.2rem;
+    line-height: 3rem;
+    color: $darkColor;
+    width: 60%;
+    text-align: center;
+}
+
+.organizations--items--box {
+    width: 90%;
+    margin: 0 auto;
+    height: 33rem;
+}
+
+.organization--title--box {
+    border-bottom: 1px solid #707070;
+    padding-bottom: 2.8rem;
+    margin-bottom: 3.4rem;
+    width: 100%;
+    color: $darkColor;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.organization--titles {
+    text-align: left;
+
+    .organization--header {
+        font-size: 2.6rem;
+        line-height: 3.1rem;
+        margin-bottom: .6rem;
+    }
+}
+
+.organization--description, .organization--subheader {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    font-family: $font-alt;
+    font-weight: 300;
+}
+
+.pagination--numbers--box {
+    width: 10%;
+    margin: 6rem auto 8rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.pagination--number--btn {
+    padding: 1.3rem 1.5rem;
+    border: 0;
+    background-color: transparent;
+    outline: none;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    color: $darkColor;
+}
+
+.active--btn {
+    border: 1px solid $darkColor;
+}

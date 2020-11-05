@@ -1,0 +1,92 @@
+{
+    "fundations": [
+        {
+            "name": "Fundacjom",
+            "description": "W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.",
+            "items": [
+                {
+                    "header": "Fundacja “Dbam o Zdrowie”",
+                    "subheader": "ubrania, jedzenie, sprzęt AGD, meble, zabawki",
+                    "description": "Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej."
+                },
+                {
+                    "header": "Fundacja “Dla dzieci”",
+                    "subheader": "ubrania, meble, zabawki",
+                    "description": "Cel i misja: Pomoc dzieciom z ubogich rodzin."
+                },
+                {
+                    "header": "Fundacja “Bez domu”",
+                    "subheader": "ubrania, jedzenie, ciepłe koce",
+                    "description": "Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania."
+                },
+                {
+                    "header": "Fundacja “Lorem ipsum”",
+                    "subheader": "meble, zabawki, ciepłe koce",
+                    "description": "Cel i misja: Lorem ipsum ipsum lorem."
+                },
+                {
+                    "header": "Fundacja “Dla osób starszych”",
+                    "subheader": "meble, jedzenie, leki",
+                    "description": "Cel i misja: Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+                },
+                {
+                    "header": "Fundacja “Dla zwierząt”",
+                    "subheader": "jedzenie, leki",
+                    "description": "Cel i misja: Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+                },
+                {
+                    "header": "Fundacja “Dla osób w trudnej sytuacji”",
+                    "subheader": "meble, jedzenie, leki, odzież",
+                    "description": "Cel i misja: Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+                }
+            ]
+        },
+        {
+            "name": "Organizacjom pozarządowym",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+            "items": [
+                {
+                    "header": "Organizacja “Lorem Ipsum 1”",
+                    "subheader": "Egestas, sed, tempus",
+                    "description": "Quis varius quam quisque id diam vel quam elementum pulvinar."
+                },
+                {
+                    "header": "Organizacja “Lorem Ipsum 2”",
+                    "subheader": "Ut, aliquam, purus, sit, amet",
+                    "description": "Hendrerit gravida rutrum quisque non tellus orci ac auctor augue."
+                },
+                {
+                    "header": "Organizacja “Lorem Ipsum 3”",
+                    "subheader": "Mi, quis, hendrerit, dolor",
+                    "description": "Scelerisque in dictum non consectetur a erat nam."
+                },
+                {
+                    "header": "Organizacja “Lorem Ipsum 4”",
+                    "subheader": "Ut, aliquam, purus, sit, amet",
+                    "description": "Hendrerit gravida rutrum quisque non tellus orci ac auctor augue."
+                }
+            ]
+        },
+        {
+            "name": "Lokalnym zbiórkom",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+            "items": [
+                {
+                    "header": "Zbiórka “Lorem Ipsum 1”",
+                    "subheader": "Egestas, sed, tempus",
+                    "description": "Quis varius quam quisque id diam vel quam elementum pulvinar."
+                },
+                {
+                    "header": "Zbiórka “Lorem Ipsum 2”",
+                    "subheader": "Ut, aliquam, purus, sit, amet",
+                    "description": "Hendrerit gravida rutrum quisque non tellus orci ac auctor augue."
+                },
+                {
+                    "header": "Zbiórka “Lorem Ipsum 3”",
+                    "subheader": "Mi, quis, hendrerit, dolor",
+                    "description": "Scelerisque in dictum non consectetur a erat nam."
+                }
+            ]
+        }
+    ]
+}
