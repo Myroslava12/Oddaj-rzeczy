@@ -41,13 +41,15 @@
 }
 
 .contact--img {
-    margin: 3.1rem 0 8rem 0;
+    margin: 3.1rem 0 6rem 0;
 }
 
 .data--user--box {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 4rem;
+    margin-bottom: 7rem;
+    margin-top: 2rem;
+    height: 3rem;
 }
 
 .contact--form--label {
@@ -57,6 +59,7 @@
     line-height: 2.6rem;
     color: $darkColor;
     font-weight: 600;
+    box-sizing: border-box;
 }
 
 .contact--form--input {
@@ -83,7 +86,6 @@
     outline: none;
     border-bottom: 1px solid #707070;
     padding: 1.5rem 0 .6rem 0;
-    margin-bottom: 4.4rem;
 
     &::placeholder {
         color: #3C3C3C26;
@@ -98,7 +100,7 @@
 
 .contact--form--submit {
     display: block;
-    margin: 0 0 0 auto;
+    margin: 4.4rem 0 0 auto;
     outline: none;
     border: .75px solid $darkColor;
     padding: 1.3rem 5.2rem;
@@ -144,4 +146,21 @@
 
 .footer--icon--in {
     background-image: url(../../../assets/Instagram.svg);
+}
+
+.message--error {
+    font-size: 1rem;
+    line-height: 1.4rem;
+    color: rgb(247, 17, 17);
+    font-family: $font-base;
+}
+
+.success--message {
+    color: rgb(7, 134, 7);
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: $font-base;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
 }

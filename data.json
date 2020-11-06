@@ -2,6 +2,7 @@
     "fundations": [
         {
             "name": "Fundacjom",
+            "id": "1",
             "description": "W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.",
             "items": [
                 {
@@ -43,6 +44,7 @@
         },
         {
             "name": "Organizacjom pozarządowym",
+            "id": "2",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
             "items": [
                 {
@@ -69,6 +71,7 @@
         },
         {
             "name": "Lokalnym zbiórkom",
+            "id": "3",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
             "items": [
                 {
