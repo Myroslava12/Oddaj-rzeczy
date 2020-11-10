@@ -1,17 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import decoration from "../../../assets/Decoration.svg";
-import app from "firebase/app";
+import {FirebaseContext} from "../../Firebase";
 import Fundations from "./Fundations";
 import cx from "classnames";
 
 const WhoWeHelp = () => {
     const [items, setItems] = useState([]);
     const [activeItem, setActiveItem] = useState(null);
+    const firebase = useContext(FirebaseContext);
 
     useEffect(() => {
-        const fetchData = async () => {
-            const db = app.firestore();  
-            const dataFundations = await db.collection("fundations").get();
+        const fetchData = async () => { 
+            const dataFundations = await firebase.db.collection("fundations").get();
             setItems(dataFundations.docs.map(doc => doc.data()));
         }
         fetchData();

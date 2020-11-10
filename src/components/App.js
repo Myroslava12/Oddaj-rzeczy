@@ -15,7 +15,7 @@ const App = () => {
           <Route exact path={ROUTES.HOME} component={Home}/>
           <Route path={ROUTES.LOG_IN} component={LogIn}/>
           <Route path={ROUTES.REGISTER} component={Register}/>
-          <Route path={ROUTES.LOGGED_IN} component={LoggedIn}/>
+          <Route path={ROUTES.FORM} component={LoggedIn}/>
           <Route path={ROUTES.LOG_OUT} component={LogOut}/>
         </Switch>
       </Router>

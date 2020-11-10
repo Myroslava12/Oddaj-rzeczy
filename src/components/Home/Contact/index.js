@@ -46,12 +46,11 @@ const Contact = () => {
                 },
                 body: JSON.stringify(values, null, 2),
             })
-            .then(function(res){ return res.json(); })
+            .then((res) => res.json())
             .then((r) => {
                 formik.values.name = '';
                 formik.values.email = '';
                 formik.values.message = '';
-                console.log("Success: ", r);
                 setIsSuccess(true);
             })
             .catch((err) => console.warn(err));

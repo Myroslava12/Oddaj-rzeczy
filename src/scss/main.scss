@@ -31,3 +31,11 @@ body {
     font-size: 8px;
   }
 }
+
+button:hover, a:hover {
+  transform: scale(1.05);
+}
+
+button, a {
+  transition: .1s;
+}

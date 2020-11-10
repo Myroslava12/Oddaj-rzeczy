@@ -1,0 +1,35 @@
+.log--out--box {
+    width: 100%;
+    height: calc(100vh - 12.4rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: $font-base;
+}
+
+.log--out--title {
+    font-size: 4rem;
+    line-height: 5.5rem;
+    color: $darkColor;
+    width: 40%;
+    text-align: center;
+}
+
+.log--out--img {
+    margin: 2.5rem 0 3.5rem 0;
+}
+
+.log--out--btn {
+    outline: none;
+    border: .75px solid $darkColor;
+    padding: 1.3rem 1.8rem;
+    background-color: transparent;
+
+    a {
+        text-decoration: none;
+        font-size: 1.8rem;
+        color: #000000;
+        font-weight: 300;
+    }
+}

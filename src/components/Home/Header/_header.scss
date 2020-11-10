@@ -70,3 +70,13 @@
 .link--organize div {
     padding: 1.3rem 3.81rem;
 }
+
+@media (min-width: 1300px) and (max-width: 1599px) {
+    .link--give div {
+        padding: 1.3rem 3.5rem;
+    }
+    
+    .link--organize div {
+        padding: 1.3rem 2.31rem;
+    }
+}

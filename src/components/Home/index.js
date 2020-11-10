@@ -8,6 +8,7 @@ import Contact from "./Contact";
 import WhoWeHelp from './WhoWeHelp';
 
 const Home = () => {
+
     return (
         <div className="home--app">
             <div className="container--home">

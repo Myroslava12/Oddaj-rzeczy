@@ -11,6 +11,12 @@
 .nav--links {
     display: flex;
     justify-content: space-between;
+
+    li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .link--auth {
@@ -37,4 +43,11 @@
 .link--home--active {
     padding: .9rem 2rem;
     border: .75px solid $darkColor;
+}
+
+.user--email--text {
+    font-size: 1.4rem;
+    line-height: 8.5rem;
+    color: #000000;
+    font-family: $font-base;
 }
