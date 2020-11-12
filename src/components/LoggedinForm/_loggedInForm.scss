@@ -1,0 +1,365 @@
+.form--logged--in--box {
+    width: 100%;
+    height: calc(100vh - 12.4rem);
+    display: flex;
+    font-family: $font-base;
+}
+
+.form--bg {
+    width: 50%;
+    height: 100vh;
+    background-image: url(../../assets/Form-Hero-Image.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.form--description--box {
+    text-align: center;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 0 0 auto;
+    color: $darkColor;
+}
+
+.form--logged--in--title {
+    font-size: 3.8rem;
+    line-height: 5.5rem;
+}
+
+.form--logged--in--img {
+    margin: 2.5rem 0 2rem 0;
+}
+
+.form--subtitle {
+    font-size: 4rem;
+    line-height: 5.5rem;
+    font-weight: 300;
+    margin-bottom: 5.6rem;
+}
+
+.form--square--box {
+    width: 83%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.form--square {
+    width: 13rem;
+    height: 13rem;
+    border: .75px solid $darkColor;
+    transform: rotate(45deg);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+        display: inline-block;
+        transform: rotate(-45deg);
+        font-weight: 300;
+        line-height: 2.7rem;
+    }
+}
+
+.square--number {
+    font-size: 3.2rem;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+.square--title {
+    font-size: 2.2rem;
+    width: 100%;
+    z-index: 3;
+}
+
+// StepOne
+
+.form--header--box {
+    width: 100%;
+    padding: 5rem 0;
+    background-color: $yellowColor;
+    font-family: $font-base;
+}
+
+.form--header--title {
+    font-size: 3.6rem;
+    line-height: 3.2rem;
+    font-weight: 600;
+    color: #000000;
+}
+
+.form--header--text {
+    font-size: 2.2rem;
+    line-height: 3rem;
+    color: $darkColor;
+}
+
+.form--body--box {
+    height: 88rem;
+    width: 100%;
+    background-image: url(../../assets//Background-Form.jpg);
+    background-size: cover;
+    background-position: center right 20%;
+
+    .container--home {
+        height: 100%;
+    }
+}
+
+.form--boby--info {
+    width: 60%;
+    height: 100%;
+    padding: 3.5rem 0 0 0;
+    position: relative;
+    box-sizing: border-box;
+
+    .form--btn {
+        bottom: 5rem;
+        position: absolute;
+    }
+}
+
+.steps--counter {
+    font-size: 2.4rem;
+    line-height: 2.7rem;
+    font-weight: 300;
+    color: $darkColor;
+}
+
+.form--body--title {
+    margin: 7rem 0 4rem 0;
+    font-size: 3.6rem;
+    line-height: 4.5rem;
+    color: #000000;
+    font-weight: 600;
+}
+
+.items--list {
+    li {
+        margin-bottom: 4.5rem;
+    }
+}
+
+.item--input[type=radio] {
+    border: .75px solid $darkColor;
+    -webkit-appearance: none;
+    width: 4rem;
+    height: 4rem;
+    margin-right: 3rem;
+    outline: none;
+
+    &:checked {
+        background-color: $yellowColor;
+    }
+}
+
+.item--label {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    color: #000000;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+}
+
+.form--btn {
+    border: .75px solid $darkColor;
+    padding: 2.3rem 6.3rem;
+    font-size: 2.4rem;
+    color: #000000;
+    font-weight: 300;
+}
+
+// step-2
+
+.form--btn--box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10rem;
+    position: absolute;
+    width: 50%;
+    bottom: 5rem;
+
+    .form--btn {
+        position: static;
+    }
+}
+
+.quantity--label {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    color: #000000;
+    font-weight: 300;
+    position: relative;
+    width: auto;
+}
+
+.quantity--select {
+    margin-left: 2.6rem; 
+    outline: none;
+    background-color: transparent;
+    border: .75px solid $darkColor;
+    padding: .8rem 1.8rem;
+    color: #000000;
+    font-weight: 300;
+    width: 25rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+.quantity--select:focus ~ .select--arrow {
+    top: 65%;
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.select--arrow {
+    position: absolute;
+    width: 4rem;
+    height: 2rem;
+    top: 65%;
+    transform: translateY(-50%);
+    right: 1rem;
+    display: block;
+    transition: .1s;
+}
+
+// step three
+
+.select--city {
+    margin: 0;
+}
+
+.checkbox--input {
+    outline: none;
+    background-color: transparent;
+    border: 0;
+    padding: 2.5rem 2.2rem;
+    width: 100%;
+    appearance: none;
+    position: relative;
+    z-index: 3;
+}
+
+.who--we--help {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+    margin-bottom: 5rem;
+}
+
+.checkbox--label {
+    flex-basis: 30%;
+    height: auto;
+    margin:1.2rem 2.4rem 1.2rem 0;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.checkbox--span {
+    position: absolute;
+    font-size: 2.2rem;
+    line-height: 3.2rem;
+    width: 100%;
+    font-family: $font-base;
+    font-weight: 300;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+    text-align: center;
+    z-index: 1;
+}
+
+.who--help--title {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    font-weight: 600;
+    margin: 5rem 0 1rem 0;
+}
+
+.checkbox--input:checked ~ .checkbox--box {
+    background-color: $yellowColor;
+}
+
+.checkbox--box {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+    border: .75px solid $darkColor;
+}
+
+.location--label {
+
+    .address--input {
+        display: block;
+        margin-top: 2rem;
+        width: 50rem;
+    }
+}
+
+.address--input {
+    outline: none;
+    background-color: transparent;
+    border: .75px solid $darkColor;
+    padding: 1rem 1.3rem;
+}
+
+// step four
+
+.address--input::-webkit-outer-spin-button,
+.address--input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.form--address--box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.form--address {
+    width: 48%;
+}
+
+.form--address--title {
+    font-size: 2.4rem;
+    line-height: 4.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.address--label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 3.2rem;
+    margin-bottom: 2rem;
+
+    .address--input {
+        width: 22rem;
+    }
+
+    span {
+        width: 23%;
+    }
+}

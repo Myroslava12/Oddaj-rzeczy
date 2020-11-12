@@ -45,3 +45,7 @@ table {
 button, a, input, textarea {
 	cursor: pointer;
 }
+
+textarea {
+	resize: none;
+}

@@ -12,7 +12,7 @@
 @import "../components/Register/register";
 @import "../components/LogIn/login";
 @import "../components/LogOut/logout";
-@import "../components/LoggedIn/loggedIn";
+@import "../components/LoggedInForm/loggedInForm";
 
 html {
   font-size: 10px;
@@ -29,6 +29,12 @@ body {
 @media (max-width: 1299px) {
   html {
     font-size: 8px;
+  }
+}
+
+@media (min-width: 1300px) and (max-width: 1399px) {
+  html {
+    font-size: 9px;
   }
 }
 

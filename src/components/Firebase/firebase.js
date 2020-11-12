@@ -27,13 +27,6 @@ class Firebase {
         return this.auth.signInWithEmailAndPassword(email, password);
     }
 
-    register = async (email, password) => {
-        await this.auth.doCreateUserWithEmailAndPassword(email, password);
-        return this.auth.currentUser.updateProfile({
-            displayName: email,
-        })
-    }
-
     doSignOut = () => {
         return this.auth.signOut();
     }
