@@ -1,7 +1,7 @@
 import React, { useState, createContext } from "react";
 import {FirebaseUserData} from "../Firebase/context";
-import Navigation from "../Home/Navigation";
-import Contact from "../Home/Contact";
+import Navigation from "../Home/Navigation/Navigation";
+import Contact from "../Home/Contact/Contact";
 import decoration from "../../assets/Decoration.svg";
 import StepOne from "./StepOne";
 import StepTwo from "./StepTwo";

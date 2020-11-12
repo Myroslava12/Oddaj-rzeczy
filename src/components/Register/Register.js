@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import Navigation from "../Home/Navigation";
+import Navigation from "../Home/Navigation/Navigation";
 import decoration from "../../assets/Decoration.svg";
 import {useFormik} from "formik";
 import {Link, useHistory, withRouter} from "react-router-dom";

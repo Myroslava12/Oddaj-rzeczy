@@ -1,7 +1,7 @@
 import React from "react";
 import {NavLink} from 'react-router-dom';
 import * as ROUTES from '../../constants/routes';
-import Navigation from "../Home/Navigation";
+import Navigation from "../Home/Navigation/Navigation";
 import decoration from "../../assets/Decoration.svg";
 
 const LogOut = () => {

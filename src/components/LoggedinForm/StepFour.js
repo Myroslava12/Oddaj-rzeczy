@@ -139,7 +139,6 @@ const StepFour = ({setFormCount}) => {
                                         id="comment"
                                         name="comment"
                                         rows="5"
-                                        // col="50"
                                         type="text"
                                         className="address--input termin--input"
                                         value={formik.values.comment}
