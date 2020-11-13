@@ -17,7 +17,7 @@
         "../components/Register/_register.scss",
         "../components/Login/_login.scss",
         "../components/Logout/_logout.scss",
-        "../components/LoggedInForm/_loggedInForm.scss"
+        "../components/Loggedin/_loggedInForm.scss"
     ],
     "names": [],
     "file": "main.css"

@@ -4,7 +4,7 @@ import * as ROUTES from '../constants/routes';
 import Home from "./Home/Home";
 import LogIn from "./Login/LogIn";
 import Register from "./Register/Register";
-import LoggedInForm from "./LoggedinForm/LoggedInForm";
+import LoggedInForm from "./Loggedin/LoggedInForm";
 import LogOut from "./Logout/LogOut";
 import {FirebaseContext} from "./Firebase";
 import {FirebaseUserLoggedIn} from './Firebase/context';
