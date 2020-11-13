@@ -1,14 +1,39 @@
 import React, { useState, useContext } from "react";
 import {useFormik} from "formik";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
 import TimeInput from 'react-time-input';
 import {FirebaseUserData} from "../Firebase/context";
 
 const StepFour = ({setFormCount}) => {
-    const [date, setDate] = useState('');
     const [hour, setHour] = useState('');
     const userInfo = useContext(FirebaseUserData);
+    const validate = (values) => {
+        const errors = {};
+
+        if (!values.street) {
+            errors.error = "Pola nie mogą być puste";
+        } else if (values.street.length < 2) {
+            errors.street = "Nazwa ulicy powinna zawierać conajmniej 2 litery";
+        } 
+
+        if (!values.city) {
+            errors.error = "Pola nie mogą być puste";
+        } else if (values.city.length < 2) {
+            errors.city = "Nazwa miasta powinna zawierać conajmniej 2 znaki";
+        }
+
+        if (!values.postCode) {
+            errors.error = "Pola nie mogą być puste";
+        } else if (values.postCode.length !== 5 || !Number(values.postCode)) {
+            errors.postCode = "Wpisz poprawnie kod pocztowy";
+        }
+
+        if (!values.numberPhone) {
+            errors.error = "Pola nie mogą być puste";
+        } else if (values.numberPhone.length !== 9 || !Number(values.numberPhone)) {
+            errors.numberPhone = "Podaj poprawny numer telefonu";
+        }
+        return errors;
+    }
 
     const formik = useFormik({
         initialValues: {
@@ -16,9 +41,11 @@ const StepFour = ({setFormCount}) => {
             city: '',
             postCode: '',
             numberPhone: '',
+            date: '',
             comment: ''
         },
-        onSubmit: (values, e) => {
+        validate,
+        onSubmit: (values) => {
             setFormCount(prev => ({...prev, stepFour: false, summary: true}));
             userInfo.setInfo(prev => ({
                 ...prev,
@@ -27,12 +54,11 @@ const StepFour = ({setFormCount}) => {
                     city: values.city,
                     postCode: values.postCode,
                     numberPhone: values.numberPhone,
-                    date: date,
+                    date: values.date,
                     hour: hour,
                     comment: values.comment
                 }
             }))
-            e.preventDefault();
         }
     })
 
@@ -42,10 +68,7 @@ const StepFour = ({setFormCount}) => {
         setFormCount(prev => ({...prev, stepThree: true, stepFour: false}));
     }
 
-    const isInvalid = formik.values.street < 2 ||
-        formik.values.city < 2 ||
-        formik.values.numberPhone !== 9;
-
+    const isInvalid = formik.errors.error;
 
     return (
         <section className="section--form">
@@ -74,6 +97,7 @@ const StepFour = ({setFormCount}) => {
                                         onChange={formik.handleChange}
                                         placeholder="Podaj nazwe ulicę, numer domu i mieszkania"
                                     />
+                                    {formik.errors.street && <div className="message--error">{formik.errors.street}</div>}
                                 </label>
                                 <label htmlFor="city" className="address--label">
                                     Miasto
@@ -86,41 +110,46 @@ const StepFour = ({setFormCount}) => {
                                         onChange={formik.handleChange}
                                         placeholder="Podaj nazwe miasta"
                                     />
+                                    {formik.errors.city && <div className="message--error">{formik.errors.city}</div>}
                                 </label>
                                 <label htmlFor="postCode" className="address--label">
                                     <span>Kod pocztowy</span>
                                     <input 
                                         id="postCode"
                                         name="postCode"
-                                        type="number"
+                                        type="text"
                                         className="address--input"
                                         value={formik.values.postCode}
                                         onChange={formik.handleChange}
                                         placeholder="55300"
                                     />
+                                    {formik.errors.postCode && <div className="message--error">{formik.errors.postCode}</div>}
                                 </label>
                                 <label htmlFor="numberPhone" className="address--label">
                                     <span>Numer telefonu</span>
                                     <input 
                                         id="numberPhone"
                                         name="numberPhone"
-                                        type="number"
+                                        type="text"
                                         className="address--input"
                                         value={formik.values.numberPhone}
                                         onChange={formik.handleChange}
                                         placeholder="777555444"
                                     />
+                                    {formik.errors.numberPhone && <div className="message--error">{formik.errors.numberPhone}</div>}
                                 </label>
                             </div>
                             <div className="form--termin">
                                 <h3 className="form--address--title">Termin odbioru:</h3>
                                 <label htmlFor="date" className="address--label">
                                     <span>Data</span>
-                                    <DatePicker 
+                                    <input
                                         id="date"
-                                        selected={date} 
-                                        onChange={date => setDate(date)}
+                                        type="text"
+                                        value={formik.values.date}
+                                        onChange={formik.handleChange}
                                         className="address--input date--input"
+                                        placeholder="DD/MM/YYYY"
                                     />
                                 </label>
                                 <label htmlFor="date" className="address--label">

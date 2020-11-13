@@ -78,7 +78,7 @@ const StepThree = ({setFormCount}) => {
                         <h3 className="who--help--title">Komu chcesz pomóc?</h3>
                         <div className="who--we--help">
                             <label htmlFor="who" className="checkbox--label">
-                                <span className="checkbox--span">dzieciom</span>
+                                <span className="checkbox--span">dzieciom </span>
                                     <input
                                         id="who"
                                         value="dzieciom"
@@ -91,7 +91,7 @@ const StepThree = ({setFormCount}) => {
                                 <div className="checkbox--box"></div>
                             </label>
                             <label htmlFor="who" className="checkbox--label">
-                                <span className="checkbox--span">samotnym matkom</span>
+                                <span className="checkbox--span">samotnym matkom </span>
                                 <input
                                     id="who"
                                     value="samotnym matkom"
@@ -104,7 +104,7 @@ const StepThree = ({setFormCount}) => {
                                 <div className="checkbox--box"></div>
                             </label>
                             <label htmlFor="who" className="checkbox--label">
-                                <span className="checkbox--span">bezdomnym</span>
+                                <span className="checkbox--span">bezdomnym </span>
                                 <input
                                     id="who"
                                     value="bezdomnym"
@@ -117,7 +117,7 @@ const StepThree = ({setFormCount}) => {
                                 <div className="checkbox--box"></div>
                             </label>
                             <label htmlFor="who" className="checkbox--label">
-                                <span className="checkbox--span">niepełnosprawnym</span>
+                                <span className="checkbox--span">niepełnosprawnym </span>
                                 <input
                                     id="who"
                                     value="niepełnosprawnym"
@@ -130,7 +130,7 @@ const StepThree = ({setFormCount}) => {
                                 <div className="checkbox--box"></div>
                             </label>
                             <label htmlFor="who" className="checkbox--label">
-                                <span className="checkbox--span">osobom starszym</span>
+                                <span className="checkbox--span">osobom starszym </span>
                                 <input
                                     id="who"
                                     value="osobom starszym"
@@ -157,7 +157,7 @@ const StepThree = ({setFormCount}) => {
                         </label>
                         <div className="form--btn--box">
                             <button className="form--btn" onClick={onClickBack}>Wstecz</button>
-                            <button className="form--btn" type="submit">Dalej</button>
+                            <button disabled={isInvalid} className="form--btn" type="submit">Dalej</button>
                         </div>
                     </form>
                 </div>

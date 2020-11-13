@@ -1,9 +1,12 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {Link} from "react-router-dom";
 import * as ROUTES from "../../../constants/routes";
 import decoration from "../../../assets/Decoration.svg";
+import {FirebaseUserLoggedIn} from "../../Firebase/context";
 
 const FourSteps = () => {
+    const userLoggedIn = useContext(FirebaseUserLoggedIn);
+
     return (
         <section className="section--four--steps" id="description">
             <h2 className="four--steps--title">Wystarczą 4 proste kroki</h2>
@@ -33,7 +36,7 @@ const FourSteps = () => {
                     <p className="one--step--text">kurier przyjedzie w dogodnym terminie</p>
                 </div>
             </div>
-            <Link to={ROUTES.LOG_IN} className="header--link four--steps--link">
+            <Link to={userLoggedIn ? ROUTES.FORM : ROUTES.LOG_IN} className="header--link four--steps--link">
                 <div>
                     <span>Oddaj </span> <br />
                     <span>rzeczy</span>

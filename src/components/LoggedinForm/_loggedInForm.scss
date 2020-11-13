@@ -189,7 +189,7 @@
     justify-content: space-between;
     height: 10rem;
     position: absolute;
-    width: 50%;
+    width: 54%;
     bottom: 5rem;
 
     .form--btn {
@@ -350,9 +350,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     font-weight: 300;
     font-size: 2rem;
-    line-height: 3.2rem;
+    line-height: 2.6rem;
     margin-bottom: 2rem;
 
     .address--input {
@@ -362,4 +363,85 @@
     span {
         width: 23%;
     }
+
+    .message--error {
+        width: 25rem;
+        margin: 0 0 0 auto;
+        text-align: center;
+    } 
+}
+
+// summary
+
+.summary--title {
+    font-size: 2.4rem;
+    line-height: 3rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.summary--item--box {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.summary--img {
+    margin-right: 2rem;
+    width: 5rem;
+    height: 5rem;
+}
+
+.summary--text {
+    font-size: 2.4rem;
+    line-height: 4rem;
+}
+
+.summary--address--box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 3rem;
+}
+
+.summary--info--box {
+    flex-basis: 48%;
+}
+
+.summary--address--info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.summary--info--text {
+    flex-basis: 48%;
+    text-align: left;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    font-weight: 300;
+}
+
+// finish--form
+
+.finish--form--box {
+    margin: 0 auto 0 0 0;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.finish--title {
+    font-size: 4rem;
+    line-height: 5.5rem;
+    color: $darkColor;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    width: 80%;
 }

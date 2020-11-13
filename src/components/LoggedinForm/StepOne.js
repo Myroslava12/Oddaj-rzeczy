@@ -9,7 +9,6 @@ const StepOne = ({setFormCount, setInfo}) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // firebase.db.collection("data").add({item: items});
         setFormCount(prev => ({...prev, stepOne: false, stepTwo: true}));
         userInfo.setInfo(prev => ({...prev, title: items}));
     }
@@ -101,7 +100,7 @@ const StepOne = ({setFormCount, setInfo}) => {
                                 </label>
                             </li>
                         </ul>
-                        <button  className="form--btn" type="submit">Dalej</button>
+                        <button disabled={isInvalid} className="form--btn" type="submit">Dalej</button>
                     </form>
                 </div>
             </div>

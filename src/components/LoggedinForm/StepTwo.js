@@ -57,7 +57,7 @@ const StepTwo = ({setFormCount}) => {
                         </label>
                         <div className="form--btn--box">
                             <button className="form--btn" onClick={onClickBack}>Wstecz</button>
-                            <button  className="form--btn" type="submit">Dalej</button>
+                            <button disabled={isInvalid} className="form--btn" type="submit">Dalej</button>
                         </div>
                     </form>
                 </div>

@@ -8,6 +8,7 @@ import StepTwo from "./StepTwo";
 import StepThree from "./StepThree";
 import StepFour from "./StepFour";
 import Summary from "./Summary";
+import Finish from "./Finish";
 
 const LoggedInForm = () => {
     const [formCount, setFormCount] = useState({
@@ -73,6 +74,7 @@ const LoggedInForm = () => {
                 {formCount.stepThree && <StepThree setFormCount={setFormCount} />}
                 {formCount.stepFour && <StepFour setFormCount={setFormCount} />}
                 {formCount.summary && <Summary setFormCount={setFormCount} />}
+                {formCount.finish && <Finish setFormCount={setFormCount} />}
             </FirebaseUserData.Provider>
             <Contact />
         </section>

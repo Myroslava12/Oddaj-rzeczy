@@ -1,9 +1,12 @@
-import React from "react";
+import React, {useContext} from "react";
 import {Link} from 'react-router-dom';
 import * as ROUTES from "../../../constants/routes";
 import decoration from "../../../assets/Decoration.svg";
+import {FirebaseUserLoggedIn} from "../../Firebase/context";
 
 const Header = () => {
+    const userLoggedIn = useContext(FirebaseUserLoggedIn);
+
     return (
         <div className="header--box" id="header">
             <div className="header--bg--img"></div> 
@@ -12,13 +15,13 @@ const Header = () => {
                 <h1 className="header--title">Oddaj niechciane rzeczy w zaufane ręce</h1>
                 <img className="header--img" src={decoration} alt="decoration" />
                 <div className="header--links--box">
-                    <Link to={ROUTES.LOG_IN} className="header--link link--give">
+                    <Link to={userLoggedIn ? ROUTES.FORM : ROUTES.LOG_IN} className="header--link link--give">
                         <div>
                             <span>Oddaj </span> <br />
                             <span>rzeczy</span>
                         </div>
                     </Link>
-                    <Link to={ROUTES.LOG_IN} className="header--link link--organize">
+                    <Link to={userLoggedIn ? ROUTES.FORM : ROUTES.LOG_IN} className="header--link link--organize">
                         <div>
                             <span>Zorganizuj </span> <br />
                             <span>zbiórkę</span>

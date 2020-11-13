@@ -10,4 +10,6 @@ export const withFirebase = Component => props => (
 
 export const FirebaseUserData = React.createContext(null);
 
+export const FirebaseUserLoggedIn = React.createContext(null);
+
 export default FirebaseContext;

@@ -1,24 +1,20 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext} from "react";
 import {NavLink} from 'react-router-dom';
 import * as ROUTES from '../../../constants/routes';
 import {Link} from "react-scroll";
+import {FirebaseUserLoggedIn} from "../../Firebase/context";
 import {FirebaseContext} from "../../Firebase";
 
-const Navigation = () => {
-    const [authUser, setAuthUser] = useState(null);
-    const firebase = useContext(FirebaseContext);
 
-    useEffect(() => {
-        firebase.auth.onAuthStateChanged(user => {
-            user ? setAuthUser(user) : setAuthUser(null);
-        })
-    }, []);
+const Navigation = () => {
+    const userLoggedIn = useContext(FirebaseUserLoggedIn);
+    const firebase = useContext(FirebaseContext);
 
     return (
         <nav className="nav--box">
-            {authUser ? <NavigationAuth email={authUser.email} firebase={firebase} /> : <NavigationNonAuth />}
+            {userLoggedIn ? <NavigationAuth email={userLoggedIn.email} firebase={firebase} /> : <NavigationNonAuth />}
             <ul className="nav--links">
-                <li><Link to="header" smooth={true} duration={200} className="link--home link--home--active" >Start</Link></li>
+                <li><NavLink to={ROUTES.HOME} className="link--home link--home--active">Start</NavLink></li>
                 <li><Link to="description" smooth={true} duration={500} className="link--home" >O co chodzi?</Link></li>
                 <li><Link to="aboutUs" smooth={true} duration={800} className="link--home" >O nas</Link></li>
                 <li><Link to="organizations" smooth={true} duration={1200} className="link--home" >Fundacja i organizacje</Link></li>
@@ -37,7 +33,7 @@ const NavigationNonAuth = () => {
     )
 }
 
-const NavigationAuth = ({email, firebase}) => {
+export const NavigationAuth = ({email, firebase}) => {
     const onClick = firebase.doSignOut;
     
     return (
