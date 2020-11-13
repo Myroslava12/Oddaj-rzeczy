@@ -4,12 +4,12 @@ import arrow from "../../assets/Icon-Arrow-Down.svg";
 import cx from "classnames";
 
 const StepThree = ({setFormCount}) => {
-    const [location, setLocation] = useState('');
-    const [checked, setChecked] = useState(false);
-    const [whoHelp, setWhoHelp] = useState([]);
-    const [valueOrg, setValueOrg] = useState('');
-
     const userInfo = useContext(FirebaseUserData);
+    const [location, setLocation] = useState(userInfo.info.location);
+    const [checked, setChecked] = useState(false);
+    const [whoHelp, setWhoHelp] = useState([userInfo.info.who]);
+    const [valueOrg, setValueOrg] = useState(userInfo.info.organization);
+
 
     const handleChange = () => setChecked(!checked);
 

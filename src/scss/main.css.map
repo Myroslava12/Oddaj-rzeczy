@@ -15,8 +15,8 @@
         "../components/Home/Header/_header.scss",
         "../components/Home/Contact/_contact.scss",
         "../components/Register/_register.scss",
-        "../components/LogIn/_login.scss",
-        "../components/LogOut/_logout.scss",
+        "../components/Login/_login.scss",
+        "../components/Logout/_logout.scss",
         "../components/LoggedInForm/_loggedInForm.scss"
     ],
     "names": [],

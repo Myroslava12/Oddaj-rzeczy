@@ -4,8 +4,8 @@ import TimeInput from 'react-time-input';
 import {FirebaseUserData} from "../Firebase/context";
 
 const StepFour = ({setFormCount}) => {
-    const [hour, setHour] = useState('');
     const userInfo = useContext(FirebaseUserData);
+    const [hour, setHour] = useState(userInfo.info.address.hour);
     const validate = (values) => {
         const errors = {};
 
@@ -37,12 +37,12 @@ const StepFour = ({setFormCount}) => {
 
     const formik = useFormik({
         initialValues: {
-            street: '',
-            city: '',
-            postCode: '',
-            numberPhone: '',
-            date: '',
-            comment: ''
+            street: userInfo.info.address.street,
+            city: userInfo.info.address.city,
+            postCode: userInfo.info.address.postCode,
+            numberPhone: userInfo.info.address.numberPhone,
+            date: userInfo.info.address.date,
+            comment: userInfo.info.address.comment
         },
         validate,
         onSubmit: (values) => {

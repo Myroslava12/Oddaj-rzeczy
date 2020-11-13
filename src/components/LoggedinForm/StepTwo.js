@@ -3,8 +3,8 @@ import {FirebaseUserData} from "../Firebase/context";
 import arrow from "../../assets/Icon-Arrow-Down.svg";
 
 const StepTwo = ({setFormCount}) => {
-    const [quantity, setQuantity] = useState('');
     const userInfo = useContext(FirebaseUserData);
+    const [quantity, setQuantity] = useState(userInfo.info.quantity);
 
     const onChange = (e) => setQuantity(e.target.value);
 

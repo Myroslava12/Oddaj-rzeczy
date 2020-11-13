@@ -20,7 +20,7 @@ const LoggedInForm = () => {
         finish: false
     });
 
-    const [info, setInfo] = useState({
+    const [info, setInfoOriginal] = useState({
         title: '',
         quantity: '',
         who: '',
@@ -36,6 +36,10 @@ const LoggedInForm = () => {
             comment: ''
         }
     });
+
+    const setInfo = (fn) => {
+        setInfoOriginal(fn);
+    }
 
     return (
         <section className="section--form">
