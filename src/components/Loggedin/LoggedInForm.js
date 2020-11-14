@@ -1,4 +1,4 @@
-import React, { useState, createContext } from "react";
+import React, { useState } from "react";
 import {FirebaseUserData} from "../Firebase/context";
 import Navigation from "../Home/Navigation/Navigation";
 import Contact from "../Home/Contact/Contact";
@@ -23,7 +23,7 @@ const LoggedInForm = () => {
     const [info, setInfoOriginal] = useState({
         title: '',
         quantity: '',
-        who: '',
+        who: [],
         location: '',
         organization: '',
         address: {
@@ -37,9 +37,7 @@ const LoggedInForm = () => {
         }
     });
 
-    const setInfo = (fn) => {
-        setInfoOriginal(fn);
-    }
+    const setInfo = (fn) => setInfoOriginal(fn);
 
     return (
         <section className="section--form">
@@ -49,7 +47,7 @@ const LoggedInForm = () => {
                     <div className="form--bg"></div>
                     <div className="form--description--box">
                         <h2 className="form--logged--in--title">Oddaj rzeczy, których już nie chcesz POTRZEBUJĄCYM</h2>
-                        <img className="form--logged--in--img" src={decoration} />
+                        <img className="form--logged--in--img" src={decoration} alt="decoration" />
                         <h3 className="form--subtitle">Wystarczą 4 proste kroki:</h3>
                         <div className="form--square--box">
                             <div className="form--square">

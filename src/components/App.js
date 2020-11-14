@@ -11,13 +11,13 @@ import {FirebaseUserLoggedIn} from './Firebase/context';
 
 const App = () => {
   const [authUser, setAuthUser] = useState(null);
-    const firebase = useContext(FirebaseContext);
+  const firebase = useContext(FirebaseContext);
 
   useEffect(() => {
-      firebase.auth.onAuthStateChanged(user => {
-          user ? setAuthUser(user) : setAuthUser(null);
-      })
-  }, []);
+    firebase.auth.onAuthStateChanged(user => {
+        user ? setAuthUser(user) : setAuthUser(null);
+    })
+  }, [firebase.auth]);
 
   return (
     <>

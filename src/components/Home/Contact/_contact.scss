@@ -130,6 +130,12 @@
     display: flex;
     justify-content: space-between;
 
+    button {
+        outline: none;
+        background-color: transparent;
+        border: 0;
+    }
+
     .footer--icon {
         width: 3rem;
         height: 3rem;

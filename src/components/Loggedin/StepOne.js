@@ -1,11 +1,10 @@
 import React, {useContext, useState} from "react";
 import {FirebaseUserData} from "../Firebase/context";
 
-const StepOne = ({setFormCount, setInfo}) => {
+const StepOne = ({setFormCount}) => {
     const userInfo = useContext(FirebaseUserData);
     const [items, setItems] = useState(userInfo.info.title);
-    
-    
+     
     const handleChange = (e) => setItems(e.target.value);
 
     const handleSubmit = (e) => {

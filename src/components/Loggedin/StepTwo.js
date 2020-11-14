@@ -53,7 +53,7 @@ const StepTwo = ({setFormCount}) => {
                                 <option className="select--option" value="4">4</option>
                                 <option className="select--option" value="5">5</option>
                             </select>
-                            <img src={arrow} className="select--arrow" />
+                            <img src={arrow} className="select--arrow" alt="arrow" />
                         </label>
                         <div className="form--btn--box">
                             <button className="form--btn" onClick={onClickBack}>Wstecz</button>

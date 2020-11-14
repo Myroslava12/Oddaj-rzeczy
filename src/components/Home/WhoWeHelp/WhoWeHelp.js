@@ -3,19 +3,14 @@ import decoration from "../../../assets/Decoration.svg";
 import {FirebaseContext} from "../../Firebase";
 import Fundations from "./Fundations";
 import cx from "classnames";
+import {fetchData} from "../../../services/api"
 
 const WhoWeHelp = () => {
     const [items, setItems] = useState([]);
     const [activeItem, setActiveItem] = useState(null);
     const firebase = useContext(FirebaseContext);
 
-    useEffect(() => {
-        const fetchData = async () => { 
-            const dataFundations = await firebase.db.collection("fundations").get();
-            setItems(dataFundations.docs.map(doc => doc.data()));
-        }
-        fetchData();
-    }, []);
+    useEffect(() => fetchData(firebase, setItems), [firebase]);
 
     useEffect(() => setActiveItem(items[0]), [items]);
     
@@ -25,7 +20,7 @@ const WhoWeHelp = () => {
         <section className="section--we--help" id="organizations">
             <div className="container--home">
                 <h2 className="we--help--title">Komu pomagamy?</h2>
-                <img className="we--help--img" src={decoration} />
+                <img className="we--help--img" src={decoration} alt="decoration" />
                 <div className="we--help--box">
                     <div className="we--help--btn--box">
                         {activeItem && items.map(item => {

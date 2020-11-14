@@ -1,15 +1,13 @@
 import React, { useState, useContext } from "react";
 import {FirebaseUserData} from "../Firebase/context";
 import arrow from "../../assets/Icon-Arrow-Down.svg";
-import cx from "classnames";
 
 const StepThree = ({setFormCount}) => {
     const userInfo = useContext(FirebaseUserData);
     const [location, setLocation] = useState(userInfo.info.location);
     const [checked, setChecked] = useState(false);
-    const [whoHelp, setWhoHelp] = useState([userInfo.info.who]);
+    const [whoHelp, setWhoHelp] = useState(userInfo.info.who.map(item => item));
     const [valueOrg, setValueOrg] = useState(userInfo.info.organization);
-
 
     const handleChange = () => setChecked(!checked);
 
@@ -21,14 +19,15 @@ const StepThree = ({setFormCount}) => {
 
     const onClick = (e) => {
         if (e.target.checked === true) {
-            if (whoHelp.indexOf(e.target.value) == -1) {
+            if (whoHelp.indexOf(e.target.value) === -1) {
                 setWhoHelp(prev => [...prev, e.target.value]);
             }
         } else {
             const filteredItems = whoHelp.filter(item => item !== e.target.value);
-            setWhoHelp([...filteredItems])
+            setWhoHelp([...filteredItems]);
         }
     }
+
     const onChangeOrg = (e) => setValueOrg(e.target.value);
     
     const handleSubmit = (e) => {
@@ -73,7 +72,7 @@ const StepThree = ({setFormCount}) => {
                                 <option className="select--option" value="Wrocław">Wrocław</option>
                                 <option className="select--option" value="Katowice">Katowice</option>
                             </select>
-                            <img src={arrow} className="select--arrow" />
+                            <img src={arrow} className="select--arrow" alt="arrow" />
                         </label>
                         <h3 className="who--help--title">Komu chcesz pomóc?</h3>
                         <div className="who--we--help">

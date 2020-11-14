@@ -4,9 +4,7 @@ const Pagination = ({organizations}) => {
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 3;
 
-    const handleClick = (e) => {
-        setCurrentPage(Number(e.target.innerText));
-    }
+    const handleClick = (e) => setCurrentPage(Number(e.target.innerText));
 
     const indexOfLastTodo = currentPage * itemsPerPage;
     const indexOfFirstTodo = indexOfLastTodo - itemsPerPage;

@@ -6,6 +6,7 @@ import {FirebaseUserData} from "../Firebase/context";
 const StepFour = ({setFormCount}) => {
     const userInfo = useContext(FirebaseUserData);
     const [hour, setHour] = useState(userInfo.info.address.hour);
+    
     const validate = (values) => {
         const errors = {};
 

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import {useFormik} from "formik";
+import { useFormik } from "formik";
 import decoration from "../../../assets/Decoration.svg";
+import {postMessageToServer} from "../../../services/api";
 
 const Contact = () => {
     const [isSuccess, setIsSuccess] = useState(false);
@@ -37,23 +38,13 @@ const Contact = () => {
           message: '',
         },
         validate,
-        onSubmit: values => {
-            fetch("https://fer-api.coderslab.pl/v1/portfolio/contact", {
-                method: "POST",
-                headers: {
-                    'Accept': 'application/json, text/plain, */*',
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(values, null, 2),
-            })
-            .then((res) => res.json())
-            .then((r) => {
-                formik.values.name = '';
-                formik.values.email = '';
-                formik.values.message = '';
-                setIsSuccess(true);
-            })
-            .catch((err) => console.warn(err));
+        onSubmit: async (values) => {
+            const serverRequest = await postMessageToServer(values);
+            formik.values.name = '';
+            formik.values.email = '';
+            formik.values.message = '';
+            setIsSuccess(true);
+            return serverRequest;
         },
     });
 
@@ -62,7 +53,7 @@ const Contact = () => {
            <div className="container--home">
                 <form className="contact--form" onSubmit={formik.handleSubmit}>
                     <h2 className="contact--title">Skontaktuj się z nami</h2>
-                    <img className="contact--img" src={decoration} />
+                    <img className="contact--img" src={decoration} alt="decoration" />
                     {formik.errors.error && <div className="message--error">{formik.errors.error}</div>}
                     <div className="data--user--box">
                         <label htmlFor="name" className="contact--form--label">
@@ -115,12 +106,12 @@ const Contact = () => {
                 <div className="contact--footer">
                     <span className="footer--copyright">Copyright by Coders Lab</span>
                     <div className="footer--icons">
-                        <a href="#">
+                        <button>
                             <div className="footer--icon footer--icon--fb"></div>
-                        </a>
-                        <a href="#">
+                        </button>
+                        <button>
                             <div className="footer--icon footer--icon--in"></div>
-                        </a>
+                        </button>
                     </div>
                 </div>
            </div>

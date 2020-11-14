@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import {FirebaseUserData} from "../Firebase/context";
 import {FirebaseContext} from "../Firebase";
 import clother from "../../assets/Icon-1.svg";
@@ -8,17 +8,13 @@ const Summary = ({setFormCount}) => {
     const userInfo = useContext(FirebaseUserData);
     const firebase = useContext(FirebaseContext);
 
-    const onClickBack = () => {
-        setFormCount(prev => ({...prev, stepFour: true, summary: false}));
-    }
+    const onClickBack = () => setFormCount(prev => ({...prev, stepFour: true, summary: false}));
 
     const handleSubmit = (e) => {
         e.preventDefault();
         firebase.db.collection("data").add({...userInfo.info});
         setFormCount(prev => ({...prev, finish: true, summary: false}));
     }
-
-    console.log(userInfo.info.address)
 
     return (
         <section className="section--form">
@@ -28,11 +24,11 @@ const Summary = ({setFormCount}) => {
                         <h2 className="form--body--title">Podsumowanie Twojej darowizny</h2>
                         <h3 className="summary--title">Oddajesz:</h3>
                         <div className="summary--item--box">
-                            <img className="summary--img" src={clother} />
+                            <img className="summary--img" src={clother} alt="clother" />
                             <p className="summary--text">{userInfo.info.quantity} worki, {userInfo.info.title}, {userInfo.info.who + ' '}</p>
                         </div>
                         <div className="summary--item--box">
-                            <img className="summary--img" src={circle} />
+                            <img className="summary--img" src={circle} alt="circle" />
                             <p className="summary--text">Dla lokalizacji: {userInfo.info.location}</p>
                         </div>
                         <div className="summary--address--box">

@@ -10,7 +10,7 @@ const FourSteps = () => {
     return (
         <section className="section--four--steps" id="description">
             <h2 className="four--steps--title">Wystarczą 4 proste kroki</h2>
-            <img className="four--steps--img" src={decoration} />
+            <img className="four--steps--img" src={decoration} alt="decoration" />
             <div className="four--steps--box">
                 <div className="one--step--box">
                     <div className="one--step--img first--img"></div>

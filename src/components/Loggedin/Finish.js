@@ -8,7 +8,7 @@ const Finish = () => {
                 <div className="container--home">
                     <div className="finish--form--box">
                         <h2 className="finish--title">Dziękujemy za przesłanie formularza Na maila prześlemy wszelkie informacje o odbiorze.</h2>
-                        <img className="finish--img" src={decoration} />
+                        <img className="finish--img" src={decoration} alt="decoration" />
                     </div>
                 </div>
             </div>

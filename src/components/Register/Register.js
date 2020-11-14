@@ -9,14 +9,13 @@ import { withFirebase } from '../Firebase';
 import cx from "classnames";
 
 const Register = () => {
-
     return (
         <section className="section--login">
             <div className="container--home">
                 <Navigation />
                 <div className="form--login--box">
                 <h2 className="form--title">Zarejestruj się</h2>
-                <img className="form--img" src={decoration} />
+                <img className="form--img" src={decoration} alt="decoration" />
                   <RegisterForm />  
                 </div>
             </div>

@@ -11,7 +11,7 @@ const LogOut = () => {
                 <Navigation />
                 <div className="log--out--box">
                     <h1 className="log--out--title">Wylogowanie nastąpiło pomyślnie!</h1>
-                    <img className="log--out--img" src={decoration} />
+                    <img className="log--out--img" src={decoration} alt="decoration" />
                     <button className="log--out--btn"><NavLink exact to={ROUTES.HOME}>Strona główna</NavLink></button>
                 </div>
             </div>

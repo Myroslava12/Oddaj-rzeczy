@@ -9,14 +9,13 @@ import { withFirebase } from '../Firebase';
 import cx from "classnames";
 
 const LogIn = () => {
-
     return (
         <section className="section--login">
             <div className="container--home">
                 <Navigation />
                 <div className="form--login--box">
                     <h2 className="form--title">Zaloguj się</h2>
-                    <img className="form--img" src={decoration} />
+                    <img className="form--img" src={decoration} alt="decoration" />
                     <LoginForm />
                 </div>
             </div>
@@ -45,8 +44,7 @@ const LoginFormBase = () => {
 
         return errors;
     }
-
-    
+ 
     const formik = useFormik({
         initialValues: {
             email: '',
@@ -54,24 +52,16 @@ const LoginFormBase = () => {
         },
         validate,
         onSubmit: async (values, event) => {
-            // try {
-                //     await firebase.doSignInWithEmailAndPassword(values.email, values.password);
-                //     console.log(values);
-                //     history.replacy(ROUTES.LOGGED_IN);
-                //     return values;
-                // } catch(error) {
-                    //     return error;
-                    // };
-                    firebase
-                    .doSignInWithEmailAndPassword(values.email, values.password)
-                    .then(() => {
-                        history.replace(ROUTES.HOME);
-                        return values;
-                    })
-                    .catch(error => {
-                        return error;
-                    });
-                    event.preventDefault();
+            firebase
+                .doSignInWithEmailAndPassword(values.email, values.password)
+                .then(() => {
+                    history.replace(ROUTES.HOME);
+                    return values;
+                })
+                .catch(error => {
+                    return error;
+                });
+            event.preventDefault();
         }
     });
             
