@@ -9,8 +9,9 @@ Web application where everyone will be able to donate unnecessary things to trus
 ### Project is created with:
 * JavaScript
 * React.js
-* Firebase
+* Firebase, database
 * npm
+* API
 * SASS
 * Webpack
 
