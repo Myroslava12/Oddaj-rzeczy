@@ -9,6 +9,7 @@ const Header = () => {
 
     return (
         <div className="header--box" id="header">
+        <div className="mobile--first--bg"></div>
             <div className="header--bg--img"></div> 
             <div className="header--section">
                 <h1 className="header--title">Zacznij pomagać!</h1>

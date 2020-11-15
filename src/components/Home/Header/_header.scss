@@ -13,7 +13,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: 1;
 }
 
 .header--section {
@@ -22,6 +22,7 @@
     height: 100%;
     display: block;
     margin: 0 0 0 auto;
+    z-index: 2;
     
     h1, div, img {
         position: relative;
@@ -78,5 +79,49 @@
     
     .link--organize div {
         padding: 1.3rem 2.31rem;
+    }
+}
+
+@media #{$mobileScreen} {
+    .mobile--first--bg {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: white;
+        opacity: .6;
+    }
+
+    .header--section {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        h1, div, img {
+            top: 0;
+        }
+    }
+
+    .header--bg--img {
+        width: 100%;
+    }
+
+    .header--title {
+        font-size: 4rem;
+        line-height: 4.4rem;
+        margin-top: 2rem;
+    }
+
+    .header--link div {
+        width: 60%;
+        background-color: white;
+        font-size: 3.2rem;
+        line-height: 3.6rem;
+        margin: 0 auto;
     }
 }

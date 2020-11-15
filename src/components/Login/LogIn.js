@@ -51,7 +51,7 @@ const LoginFormBase = () => {
             password: '',
         },
         validate,
-        onSubmit: async (values, event) => {
+        onSubmit: async (values) => {
             firebase
                 .doSignInWithEmailAndPassword(values.email, values.password)
                 .then(() => {
@@ -61,7 +61,6 @@ const LoginFormBase = () => {
                 .catch(error => {
                     return error;
                 });
-            event.preventDefault();
         }
     });
             

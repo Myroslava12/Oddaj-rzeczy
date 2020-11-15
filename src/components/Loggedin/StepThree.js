@@ -5,8 +5,8 @@ import arrow from "../../assets/Icon-Arrow-Down.svg";
 const StepThree = ({setFormCount}) => {
     const userInfo = useContext(FirebaseUserData);
     const [location, setLocation] = useState(userInfo.info.location);
+    const [whoHelp, setWhoHelp] = useState(userInfo.info.who);
     const [checked, setChecked] = useState(false);
-    const [whoHelp, setWhoHelp] = useState(userInfo.info.who.map(item => item));
     const [valueOrg, setValueOrg] = useState(userInfo.info.organization);
 
     const handleChange = () => setChecked(!checked);
