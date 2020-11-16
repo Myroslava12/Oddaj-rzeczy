@@ -15,6 +15,13 @@ Web application where everyone will be able to donate unnecessary things to trus
 * SASS
 * Webpack
 
+## Functionality overview
+
+* Sign up
+* Log in and Log out
+* New Form creation after logging in and add to database
+* GET foundations from Firebase database
+
 ## Setup
 
 To run this project, install it locally using npm:
