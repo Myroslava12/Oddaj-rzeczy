@@ -41,6 +41,7 @@ const LoggedInForm = () => {
 
     return (
         <section className="section--form">
+            <div className="mobile--first--bg"></div>
             <div className="container--home">
                 <Navigation />
                 <div className="form--logged--in--box">

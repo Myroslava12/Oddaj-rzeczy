@@ -2,13 +2,15 @@ import React, { useState, useContext } from "react";
 import {FirebaseUserData} from "../Firebase/context";
 import arrow from "../../assets/Icon-Arrow-Down.svg";
 
+const arrayWhoHelps = ["dzieciom", "samotnym matkom", "bezdomnym", "niepełnosprawnym", "osobom starszym"];
+
 const StepThree = ({setFormCount}) => {
     const userInfo = useContext(FirebaseUserData);
     const [location, setLocation] = useState(userInfo.info.location);
     const [whoHelp, setWhoHelp] = useState(userInfo.info.who);
     const [checked, setChecked] = useState(false);
     const [valueOrg, setValueOrg] = useState(userInfo.info.organization);
-
+    
     const handleChange = () => setChecked(!checked);
 
     const onChangeLocation = (e) => setLocation(e.target.value);
@@ -76,71 +78,22 @@ const StepThree = ({setFormCount}) => {
                         </label>
                         <h3 className="who--help--title">Komu chcesz pomóc?</h3>
                         <div className="who--we--help">
-                            <label htmlFor="who" className="checkbox--label">
-                                <span className="checkbox--span">dzieciom </span>
-                                    <input
-                                        id="who"
-                                        value="dzieciom"
-                                        defaultChecked={checked}
-                                        onChange={handleChange}
-                                        onClick={onClick}
-                                        type="checkbox"
-                                        className="checkbox--input"
-                                    />
-                                <div className="checkbox--box"></div>
-                            </label>
-                            <label htmlFor="who" className="checkbox--label">
-                                <span className="checkbox--span">samotnym matkom </span>
-                                <input
-                                    id="who"
-                                    value="samotnym matkom"
-                                    defaultChecked={checked}
-                                    onChange={handleChange}
-                                    onClick={onClick}
-                                    type="checkbox"
-                                    className="checkbox--input"
-                                />
-                                <div className="checkbox--box"></div>
-                            </label>
-                            <label htmlFor="who" className="checkbox--label">
-                                <span className="checkbox--span">bezdomnym </span>
-                                <input
-                                    id="who"
-                                    value="bezdomnym"
-                                    defaultChecked={checked}
-                                    onChange={handleChange}
-                                    onClick={onClick}
-                                    type="checkbox"
-                                    className="checkbox--input"
-                                />
-                                <div className="checkbox--box"></div>
-                            </label>
-                            <label htmlFor="who" className="checkbox--label">
-                                <span className="checkbox--span">niepełnosprawnym </span>
-                                <input
-                                    id="who"
-                                    value="niepełnosprawnym"
-                                    defaultChecked={checked}
-                                    onChange={handleChange}
-                                    onClick={onClick}
-                                    type="checkbox"
-                                    className="checkbox--input"
-                                />
-                                <div className="checkbox--box"></div>
-                            </label>
-                            <label htmlFor="who" className="checkbox--label">
-                                <span className="checkbox--span">osobom starszym </span>
-                                <input
-                                    id="who"
-                                    value="osobom starszym"
-                                    defaultChecked={checked}
-                                    onChange={handleChange}
-                                    onClick={onClick}
-                                    type="checkbox"
-                                    className="checkbox--input"
-                                />
-                                <div className="checkbox--box"></div>
-                            </label>
+                            {arrayWhoHelps.map((item, id) => {
+                                return <label key={id} htmlFor={`who-${id}`} className="checkbox--label">
+                                    <span className="checkbox--span">{item }</span>
+                                        <input
+                                            id={`who-${id}`}
+                                            value={item}
+                                            // defaultChecked={checked}
+                                            checked={whoHelp.includes(item)}
+                                            onChange={handleChange}
+                                            onClick={onClick}
+                                            type="checkbox"
+                                            className="checkbox--input"
+                                        />
+                                    <div className="checkbox--box"></div>
+                                </label>
+                            })}
                         </div>
                         <label htmlFor="location" className="who--help--title location--label">
                             Wpisz nazwę konkretnej organizacji (opcjonalnie)

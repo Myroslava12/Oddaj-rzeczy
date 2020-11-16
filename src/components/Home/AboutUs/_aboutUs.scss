@@ -41,3 +41,26 @@
     background-size: cover;
     background-position: center;
 }
+
+@media #{$mobileScreen} {
+    .section--about--us {
+        flex-wrap: wrap;
+    }
+
+    .about--us--info--box {
+        flex-basis: 100%;
+        padding: 5rem 4rem 2rem 4rem;
+    }
+
+    .about--us--signature {
+        margin-top: 2rem;
+        width: 40%;
+        right: 10%;
+    }
+
+    .about--us--bg--img {
+        flex-basis: 100%;
+        height: 50rem;
+        margin-top: 17rem;
+    }
+}

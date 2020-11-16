@@ -3,11 +3,10 @@
     text-align: center;
     margin: 5.5rem 0 8.8rem 0;
 
-    .four--steps--link div {
+    .four--steps--link {
         width: 20%;
         margin: 0 auto;
         display: block;
-        padding: 1.3rem 2rem;
     }
 }
 
@@ -85,5 +84,29 @@
         top: -1rem;
         left: 50%;
         transform: translateX(-50%);
+    }
+}
+
+@media #{$mobileScreen} {
+    .four--steps--box {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .one--step--box {
+        flex: 50%;
+    }
+
+    .one--step--img {
+        margin-top: 2rem;
+    }
+
+    .section--four--steps {
+        margin: 5.5rem 0 4rem 0;
+
+        .four--steps--link {
+            width: 50%;
+            margin-bottom: 0rem;
+        }
     }
 }

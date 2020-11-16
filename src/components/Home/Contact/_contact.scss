@@ -71,10 +71,10 @@
     background-color: transparent;
     padding: 1.5rem 0 .6rem 0;
 
-    &::placeholder {
-        color: #3C3C3C26;
-        font-size: 1.8rem;
-    }
+    // &::placeholder {
+    //     color: #3C3C3C26;
+    //     font-size: 1.8rem;
+    // }
 }
 
 .contact--form--textarea {
@@ -87,6 +87,13 @@
     border-bottom: 1px solid #707070;
     padding: 1.5rem 0 .6rem 0;
 
+    // &::placeholder {
+    //     color: #3C3C3C26;
+    //     font-size: 1.8rem;
+    // }
+}
+
+.contact--form--textarea, .contact--form--input {
     &::placeholder {
         color: #3C3C3C26;
         font-size: 1.8rem;
@@ -155,7 +162,7 @@
 }
 
 .message--error {
-    font-size: 1rem;
+    font-size: 1.3rem;
     line-height: 1.4rem;
     color: rgb(247, 17, 17);
     font-family: $font-base;
@@ -178,5 +185,18 @@
         top: 50%;
         transform: translate(-50%, -50%);
         margin: 0;
+    }
+
+    .contact--form--textarea, .contact--form--input {
+        &::placeholder {
+            color: $darkColor;
+            opacity: .6;
+        }
+    }
+}
+
+@media (max-width: 349px) {
+    .footer--icon--fb {
+        margin-right: .5rem;
     }
 }

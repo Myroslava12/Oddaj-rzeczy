@@ -33,3 +33,11 @@
         font-weight: 300;
     }
 }
+
+@media #{$mobileScreen} {
+    .log--out--title {
+        font-size: 3.4rem;
+        width: 85%;
+        line-height: 4.5rem;
+    }
+}

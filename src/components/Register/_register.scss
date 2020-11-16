@@ -89,3 +89,29 @@
 .input--error {
     border-bottom: 1px solid rgb(247, 17, 17);
 }
+
+@media #{$mobileScreen} {
+    .login--form--btn--box {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 349px) {
+    .form--login {
+        width: 40rem;
+    }
+
+    .form--title {
+        font-size: 3rem;
+    }
+
+    .form--img {
+        margin: 1.5rem 0 3rem 0;
+    }
+
+    .form--login--box {
+        height: auto;
+        padding: 3rem 0;
+    }
+}

@@ -5,7 +5,9 @@
     justify-content: space-around;
     width: 100%;
     height: 9.4rem;
-    margin-top: 3rem;
+    padding-top: 3rem;
+    position: relative;
+    z-index: 6;
 }
 
 .nav--links {
@@ -34,6 +36,7 @@
 
 .link--home {
     margin-left: 5rem;
+    padding: .5rem;
     font-size: 1.8rem;
     line-height: 2.4rem;
     color: $darkColor;
@@ -56,6 +59,7 @@
 
 .navbar {
     display: none;
+    height: 9.4rem;
 
     .active {
         display: block;
@@ -147,7 +151,7 @@
         display: flex;
         align-items: center;
         padding: 0 2rem;
-        margin-top: 1.5rem;
+        padding-top: 1.5rem;
     }
 
     .nav--links {
@@ -157,5 +161,20 @@
     .nav--box {
         margin-top: 0;
         display: none;
+    }
+}
+
+@media (max-width: 349px) {
+    .navbar--btn {
+        width: 6rem;
+        height: 3.4rem;
+
+        .btn--line {
+            height: .6rem;
+        }
+    }
+
+    .navbar {
+        padding-top: .5rem;
     }
 }

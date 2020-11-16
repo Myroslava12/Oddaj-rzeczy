@@ -109,3 +109,60 @@
 .active--btn {
     border: 1px solid $darkColor;
 }
+
+@media #{$mobileScreen} {
+    .we--help--btn--box {
+        width: 96%;
+        justify-content: space-between;
+    }
+
+    .we--help--btn {
+        width: 32%;
+        padding: 1.1rem 1.5rem;
+        font-size: 1.9rem;
+        line-height: 2.4rem;
+    }
+
+    .we--help--text {
+        width: 85%;
+        margin: 5rem auto;
+    }
+
+    .organizations--items--box {
+        width: 95%;
+        height: 42rem;
+    }
+
+    .organization--subheader, .organization--description {
+        font-size: 1.6rem;
+    }
+
+    .pagination--numbers--box {
+        margin: 6rem auto 1rem auto;
+    }
+
+    .pagination--number--btn {
+        padding: .9rem 1.2rem;
+        margin: 0 .5rem;
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 349px) {
+    .organizations--items--box {
+        height: 46rem;
+    }
+
+    .we--help--btn {
+        font-size: 1.6rem;
+        padding: 1rem .8rem;
+    }
+
+    .we--help--text {
+        font-size: 1.9rem;
+    }
+
+    .organization--subheader, .organization--description {
+        font-size: 1.5rem;
+    }
+}

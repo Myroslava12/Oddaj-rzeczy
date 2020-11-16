@@ -3,6 +3,8 @@
     background-image: url(../../../assets/bg-3-columns.png);
     background-position: center;
     background-size: cover;
+    position: relative;
+    z-index: 6;
 
     .container--home {
         width: 100%;
@@ -38,4 +40,22 @@
     color: $darkColor;
     font-family: $font-alt;
     font-weight: 300;
+}
+
+@media #{$mobileScreen} {
+    .section--three--columns {
+        .container--home {
+            flex-direction: column;
+        }
+    }
+
+    .section--one--column {
+        flex-basis: 80%;
+        padding: 4rem 0 4rem 0;
+    }
+
+    .one--column--text {
+        width: 90%;
+        margin: 0 auto;
+    }
 }
