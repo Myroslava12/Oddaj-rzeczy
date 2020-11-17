@@ -76,7 +76,7 @@
     }
 }
 
-@media #{$mobileScreen} {
+@media #{$mobileScreen}, #{$mobileLargeScreen} {
     .mobile--first--bg {
         position: absolute;
         z-index: 2;
@@ -87,7 +87,7 @@
     }
 
     .header--box {
-        height: calc(100vh - 10.71rem);
+        height: calc(100vh - 10.5rem);
     }
 
     .header--section {
@@ -157,7 +157,7 @@
 
 @media (max-width: 349px) {
     .header--box {
-        height: calc(100vh - 9.71rem);
+        height: calc(100vh - 9.5rem);
     }
 
     .header--img {
@@ -168,6 +168,5 @@
         margin-top: 0;
         font-size: 2.4rem;
         line-height: 2.6rem;
-        transform: translateY(0%);
     }
 }

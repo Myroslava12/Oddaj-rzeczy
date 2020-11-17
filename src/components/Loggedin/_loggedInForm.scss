@@ -450,7 +450,7 @@
 
 @media #{$mobileScreen} {
     .form--logged--in--box {
-        height: calc(100vh - 10.71rem);
+        height: calc(100vh - 10.5rem);
         flex-wrap: wrap;
     }
 
@@ -467,6 +467,10 @@
     .form--description--box {
         width: 100%;
         z-index: 3;
+    }
+
+    .form--square--box {
+        margin-bottom: 7rem;
     }
 
     .form--square {
@@ -759,6 +763,33 @@
 
         span {
             width: 100%;
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    .form--logged--in--box {
+        height: calc(100vh - 9.5rem);
+    }
+}
+
+@media #{$mobileLargeScreen} {
+    .form--header--box {
+        padding: 5rem 1.5rem;
+        box-sizing: border-box;
+    }
+
+    .form--body--box {
+        padding: 0 1.5rem;
+    }
+
+    .form--btn--box {
+        width: 77%;
+    }
+
+    .section--form {
+        .mobile--first--bg {
+            opacity: .85;
         }
     }
 }

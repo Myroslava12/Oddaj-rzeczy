@@ -202,3 +202,21 @@
         font-size: 1.5rem;
     }
 }
+
+@media #{$mobileLargeScreen} {
+    .contact--form {
+        width: 60%;
+        padding: 1.5rem;
+    }
+
+    .contact--form--textarea, .contact--form--input {
+        &::placeholder {
+            color: $darkColor;
+            opacity: .6;
+        }
+    }
+
+    .footer--icons {
+        right: 1.5rem;
+    }
+}
