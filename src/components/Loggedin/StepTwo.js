@@ -32,6 +32,7 @@ const StepTwo = ({setFormCount}) => {
                 </div>
             </div>
             <div className="form--body--box">
+                <div className="mobile--first--bg"></div>
                 <div className="container--home">
                     <form className="form--boby--info" onSubmit={handleSubmit}>
                         <span className="steps--counter">Krok 2/4</span>

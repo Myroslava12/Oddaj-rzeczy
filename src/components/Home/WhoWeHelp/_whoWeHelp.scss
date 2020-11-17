@@ -124,13 +124,14 @@
     }
 
     .we--help--text {
-        width: 85%;
+        width: 88%;
         margin: 5rem auto;
+        font-size: 1.9rem;
     }
 
     .organizations--items--box {
         width: 95%;
-        height: 42rem;
+        height: 41rem;
     }
 
     .organization--subheader, .organization--description {
@@ -138,7 +139,7 @@
     }
 
     .pagination--numbers--box {
-        margin: 6rem auto 1rem auto;
+        margin: 1rem auto 1rem auto;
     }
 
     .pagination--number--btn {
@@ -148,9 +149,9 @@
     }
 }
 
-@media (max-width: 349px) {
+@media (max-width: 399px) {
     .organizations--items--box {
-        height: 46rem;
+        height: 45rem;
     }
 
     .we--help--btn {
@@ -164,5 +165,18 @@
 
     .organization--subheader, .organization--description {
         font-size: 1.5rem;
+    }
+
+    .organization--titles {
+        .organization--header {
+            font-size: 2.4rem;
+            line-height: 2.9rem;
+        }
+    }
+}
+
+@media (max-width: 469px) {
+    .organizations--items--box {
+        height: 47rem;
     }
 }

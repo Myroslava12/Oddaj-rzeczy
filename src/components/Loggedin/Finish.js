@@ -5,6 +5,7 @@ const Finish = () => {
     return (
         <section className="section--form">
             <div className="form--body--box">
+                <div className="mobile--first--bg"></div>
                 <div className="container--home">
                     <div className="finish--form--box">
                         <h2 className="finish--title">Dziękujemy za przesłanie formularza Na maila prześlemy wszelkie informacje o odbiorze.</h2>

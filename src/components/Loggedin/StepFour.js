@@ -79,7 +79,8 @@ const StepFour = ({setFormCount}) => {
                     <p className="form--header--text">Podaj adres oraz termin odbioru rzeczy.</p>
                 </div>
             </div>
-            <div className="form--body--box">
+            <div className="form--body--box form--body--address--info">
+                <div className="mobile--first--bg"></div>
                 <div className="container--home">
                     <form className="form--boby--info" onSubmit={formik.handleSubmit}>
                         <span className="steps--counter">Krok 4/4</span>

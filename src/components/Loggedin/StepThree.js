@@ -54,6 +54,7 @@ const StepThree = ({setFormCount}) => {
                 </div>
             </div>
             <div className="form--body--box">
+                <div className="mobile--first--bg"></div>
                 <div className="container--home">
                     <form className="form--boby--info" onSubmit={handleSubmit}>
                         <span className="steps--counter">Krok 3/4</span>
@@ -74,7 +75,7 @@ const StepThree = ({setFormCount}) => {
                                 <option className="select--option" value="Wrocław">Wrocław</option>
                                 <option className="select--option" value="Katowice">Katowice</option>
                             </select>
-                            <img src={arrow} className="select--arrow" alt="arrow" />
+                            <img src={arrow} className="select--arrow city--arrow" alt="arrow" />
                         </label>
                         <h3 className="who--help--title">Komu chcesz pomóc?</h3>
                         <div className="who--we--help">

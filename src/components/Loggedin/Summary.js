@@ -18,7 +18,8 @@ const Summary = ({setFormCount}) => {
 
     return (
         <section className="section--form">
-            <div className="form--body--box">
+            <div className="form--body--box form--body--summary--info">
+                <div className="mobile--first--bg"></div>
                 <div className="container--home">
                     <form className="form--boby--info" onSubmit={handleSubmit}>
                         <h2 className="form--body--title">Podsumowanie Twojej darowizny</h2>
@@ -36,34 +37,34 @@ const Summary = ({setFormCount}) => {
                                 <h3 className="summary--title">Adres odbioru:</h3>
                                 <div className="summary--address--info">
                                     <span className="summary--info--text">Ulica</span>
-                                    <span className="summary--info--text">{userInfo.info.address.street}</span>
+                                    <span className="summary--info--text summary--info--user">{userInfo.info.address.street}</span>
                                 </div>
                                 <div className="summary--address--info">
                                     <span className="summary--info--text">Miasto</span>
-                                    <span className="summary--info--text">{userInfo.info.address.city}</span>
+                                    <span className="summary--info--text summary--info--user">{userInfo.info.address.city}</span>
                                 </div>
                                 <div className="summary--address--info">
                                     <span className="summary--info--text">Kod pocztowy</span>
-                                    <span className="summary--info--text">{userInfo.info.address.postCode}</span>
+                                    <span className="summary--info--text summary--info--user">{userInfo.info.address.postCode}</span>
                                 </div>
                                 <div className="summary--address--info">
                                     <span className="summary--info--text">Numer telefonu</span>
-                                    <span className="summary--info--text">{userInfo.info.address.numberPhone}</span>
+                                    <span className="summary--info--text summary--info--user">{userInfo.info.address.numberPhone}</span>
                                 </div>
                             </div>
                             <div className="summary--info--box">
                                 <h3 className="summary--title">Termin odbioru:</h3>
                                 <div className="summary--address--info">
                                     <span className="summary--info--text">Data</span>
-                                    <span className="summary--info--text">{userInfo.info.address.date}</span>
+                                    <span className="summary--info--text summary--info--user">{userInfo.info.address.date}</span>
                                 </div>
                                 <div className="summary--address--info">
                                     <span className="summary--info--text">Godzina</span>
-                                    <span className="summary--info--text">{userInfo.info.address.hour}</span>
+                                    <span className="summary--info--text summary--info--user">{userInfo.info.address.hour}</span>
                                 </div>
                                 <div className="summary--address--info">
                                     <span className="summary--info--text">Uwagi do kuriera</span>
-                                    <span className="summary--info--text">{userInfo.info.address.comment}</span>
+                                    <span className="summary--info--text summary--info--user">{userInfo.info.address.comment}</span>
                                 </div>
                             </div>
                         </div>

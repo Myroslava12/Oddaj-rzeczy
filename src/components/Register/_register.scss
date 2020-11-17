@@ -97,13 +97,17 @@
     }
 }
 
-@media (max-width: 349px) {
-    .form--login {
-        width: 40rem;
-    }
-
+@media (max-width: 399px) {
     .form--title {
         font-size: 3rem;
+    }
+
+    .form--login {
+        width: 95%;
+    }
+
+    .form--box {
+        padding: 3rem 4rem;
     }
 
     .form--img {

@@ -486,12 +486,201 @@
         font-size: 3.4rem;
         line-height: 4.2rem;
     }
+
+    .form--header--box {
+        padding: 3rem 1.5rem;
+        box-sizing: border-box;
+    }
+    
+    .form--header--title {
+        font-size: 2.8rem;
+        line-height: 3rem;
+        padding-bottom: .8rem;
+    }
+    
+    .form--header--text {
+        font-size: 1.7rem;
+        line-height: 2.7rem;
+    }
+
+    .form--body--box {
+        position: relative;
+        .mobile--first--bg {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .form--boby--info {
+        z-index: 3;
+        padding: 3.5rem 1.5rem 0 1.5rem;
+        width: 100%;
+    }
+
+    .item--input[type=radio] {
+        min-width: 4rem;
+    }
+
+    .form--btn--box {
+        width: 61%;
+    }
+
+    .form--btn {
+        padding: 2.3rem 4rem;
+    }
+
+    .quantity--label {
+        font-size: 2rem;
+    }
+
+    .form--body--title {
+        font-size: 3.2rem;
+    }
+
+    .checkbox--label {
+        margin: 1.2rem 1.6rem 1.2rem 0;
+    }
+
+    .checkbox--span {
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+        font-weight: 500;
+    }
+
+    .checkbox--input {
+        padding: 2rem 1.7rem;
+    }
+
+    .form--address--box {
+        flex-wrap: wrap;
+    }
+
+    .form--body--address--info {
+        height: 125rem;
+
+        .form--body--title {
+            font-size: 2.7rem;
+        }
+    }
+
+    .form--address, .form--termin {
+        width: 95%;
+    }
+
+    .address--label {
+        .address--input {
+            width: 40rem;
+            margin-top: .7rem;
+        }
+
+        span {
+            width: 100%;
+        }
+    }
+
+    .form--body--summary--info {
+        height: 100rem;
+
+        .form--btn--box {
+            width: 80%;
+        }
+    }
+
+    .summary--address--box {
+        flex-wrap: wrap; 
+    }
+
+    .summary--info--box {
+        flex-basis: 80%;
+    }
+
+    .summary--info--text {
+        font-size: 2rem;
+        line-height: 2.8rem;
+    }
+
+    .summary--text {
+        font-size: 2.2rem;
+    }
+
+    .summary--info--user {
+        font-weight: 600;
+    }
+
+    .finish--form--box {
+        position: relative;
+        z-index: 3;
+        width: 100%;
+    }
+
+    .finish--title {
+        font-size: 3.2rem;
+    }
 }
 
-@media (max-width: 349px) {
+@media (min-width: 480px) and (max-width: 599px) {
+    .address--label {
+        .address--input {
+            width: 60%;
+            margin-top: 0;
+        }
+
+        span {
+            width: 30%;
+        }
+    }
+
+    .form--body--address--info {
+        height: 110rem;
+    }
+}
+
+@media (max-width: 399px) {
     .form--square {
         width: 7.5rem;
         height: 7.5rem;
+    }
+
+    .checkbox--label {
+        flex-basis: 40%;
+    }
+
+    .quantity--select {
+        margin: 1rem 0 0 0;
+        display: block;
+    }
+
+    .select--arrow {
+        top: 5.9rem;
+        right: -7rem;
+    }
+
+    .city--arrow {
+        top: 2rem;
+        left: 20rem;
+    }
+
+    .select--city:focus ~ .city--arrow {
+        top: 2rem !important;
+        left: 20rem !important;
+        transform: translateY(-50%) rotate(180deg);
+    }
+
+    .quantity--select:focus ~ .select--arrow {
+        top: 5.9rem;
+        right: -7rem;
+        transform: translateY(-50%) rotate(180deg);
+    }
+
+    .item--label {
+        font-size: 2rem;
+        line-height: 2.4rem;
+        width: 100%;
+    }
+
+    .form--body--title {
+        font-size: 3rem;
+        margin: 5rem 0 3rem 0;
     }
 
     .square--title {
@@ -508,5 +697,68 @@
     .form--logged--in--title {
         font-size: 3rem;
         line-height: 4rem;
+    }
+
+    .form--btn--box {
+        width: 76%;
+    }
+
+    .location--label {
+        font-size: 2rem;
+
+        .address--input {
+            width: 90%;
+        }
+    }
+
+    .form--body--summary--info {
+        height: 110rem;
+
+        .form--btn--box {
+            width: 90%;
+        }
+    }
+
+    .form--btn {
+        padding: 2rem 3rem;
+    }
+
+    .summary--info--box {
+        flex-basis: 100%;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 479px) {
+    .form--square {
+        width: 9rem;
+        height: 9rem;
+    }
+
+    .checkbox--label {
+        flex-basis: 35%;
+    }
+
+    .form--body--title {
+        margin: 4rem 0 4rem 0;
+    }
+
+    .location--label {
+        margin: 3rem 0 1rem 0;
+
+        .address--input {
+            width: 80%;
+        }
+    }
+
+    .address--label {
+        .address--input {
+            width: 90%;
+            display: block;
+            margin-top: .7rem;
+        }
+
+        span {
+            width: 100%;
+        }
     }
 }
