@@ -203,20 +203,33 @@
     }
 }
 
-@media #{$mobileLargeScreen} {
+@media #{$mobileLargeScreen}, #{$tableScreen} {
     .contact--form {
-        width: 60%;
         padding: 1.5rem;
+    }
+
+    .footer--icons {
+        right: 1.5rem;
     }
 
     .contact--form--textarea, .contact--form--input {
         &::placeholder {
             color: $darkColor;
-            opacity: .6;
+            opacity: .5;
         }
     }
+}
 
-    .footer--icons {
-        right: 1.5rem;
+@media #{$mobileLargeScreen} {
+    .contact--form {
+        width: 60%;
+        padding: 1.5rem;
+    }
+}
+
+@media #{$laptopScreen} {
+    .contact--form {
+        padding: 1.5rem;
+        box-sizing: border-box;
     }
 }

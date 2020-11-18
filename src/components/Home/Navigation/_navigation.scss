@@ -4,7 +4,7 @@
     align-items: flex-end;
     justify-content: space-around;
     width: 100%;
-    height: 9.4rem;
+    height: 15rem;
     padding-top: 3rem;
     position: relative;
     z-index: 6;
@@ -59,6 +59,7 @@
 
 .navbar {
     display: none;
+    height: 9.4rem;
 
     .active {
         display: block;
@@ -142,14 +143,14 @@
     }
 }
 
-@media #{$mobileScreen}, #{$mobileLargeScreen} {
+@media #{$mobileScreen}, #{$mobileLargeScreen}, #{$tableScreen} {
     .navbar--btn {
         display: flex;
     }
     .navbar {
         display: flex;
         align-items: center;
-        padding: 0 2rem;
+        padding: 0 1.5rem;
         padding-top: 1.5rem;
         height: 9rem;
     }
@@ -161,6 +162,12 @@
     .nav--box {
         margin-top: 0;
         display: none;
+    }
+}
+
+@media #{$mobileLargeScreen} {
+    .user--email--text {
+        font-weight: 600;
     }
 }
 
@@ -176,5 +183,19 @@
 
     .navbar {
         padding-top: .5rem;
+    }
+}
+
+@media #{$tableScreen} {
+    .user--email--text {
+        text-align: right;
+        width: 90%;
+    }
+}
+
+@media #{$laptopScreen} {
+    .nav--box {
+        padding-right: 1.5rem;
+        box-sizing: border-box;
     }
 }

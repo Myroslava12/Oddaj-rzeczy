@@ -89,7 +89,7 @@ const StepFour = ({setFormCount}) => {
                             <div className="form--address">
                                 <h3 className="form--address--title">Adres odbioru:</h3>
                                 <label htmlFor="street" className="address--label">
-                                    Ulica
+                                    <span>Ulica</span>
                                     <input 
                                         id="street"
                                         name="street"
@@ -102,7 +102,7 @@ const StepFour = ({setFormCount}) => {
                                     {formik.errors.street && <div className="message--error">{formik.errors.street}</div>}
                                 </label>
                                 <label htmlFor="city" className="address--label">
-                                    Miasto
+                                    <span>Miasto</span>
                                     <input 
                                         id="city"
                                         name="city"
@@ -155,7 +155,7 @@ const StepFour = ({setFormCount}) => {
                                     />
                                 </label>
                                 <label htmlFor="date" className="address--label">
-                                    Godzina
+                                    <span>Godzina</span>
                                     <TimeInput 
                                         id="date"
                                         initTime={hour} 

@@ -59,3 +59,10 @@
         margin: 0 auto;
     }
 }
+
+@media #{$mobileLargeScreen}, #{$laptopScreen}  {
+    .section--three--columns {
+        padding: 0 1.5rem;
+        box-sizing: border-box;
+    }
+}

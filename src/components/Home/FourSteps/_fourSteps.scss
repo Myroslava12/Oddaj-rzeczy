@@ -87,7 +87,7 @@
     }
 }
 
-@media #{$mobileScreen} {
+@media #{$mobileScreen}, #{$mobileLargeScreen} {
     .four--steps--box {
         flex-wrap: wrap;
         justify-content: space-between;
@@ -105,8 +105,29 @@
         margin: 5.5rem 0 4rem 0;
 
         .four--steps--link {
-            width: 50%;
+            width: 47%;
             margin-bottom: 0rem;
+
+            span {
+                width: 40%;
+            }
         }
+    }
+}
+
+@media #{$mobileLargeScreen} {
+    .section--four--steps {
+        .four--steps--link {
+            width: 34%;
+            
+            span {
+                width: 40%;
+            }
+        }
+    }
+
+    .four--steps--box {
+        padding: 6.2rem 1.5rem 7.3rem 1.5rem;
+        box-sizing: border-box;
     }
 }

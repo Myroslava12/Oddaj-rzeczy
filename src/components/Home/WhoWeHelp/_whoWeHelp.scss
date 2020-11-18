@@ -180,3 +180,28 @@
         height: 47rem;
     }
 }
+
+@media #{$mobileLargeScreen} {
+    .we--help--btn--box {
+        width: 90%;
+    }
+
+    .we--help--btn {
+        padding: 1.1rem 2rem;
+        font-size: 2rem;
+        line-height: 2.4rem;
+        width: 27%;
+    }
+
+    .organizations--items--box {
+        width: 100%;
+        padding: 0 1.5rem;
+        box-sizing: border-box;
+    }
+}
+
+@media (min-width: 700px ) and (max-width: 800px) {
+    .we--help--btn--box {
+        width: 80%;
+    }
+}

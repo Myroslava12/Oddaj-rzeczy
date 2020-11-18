@@ -1,0 +1,132 @@
+.address--input::-webkit-outer-spin-button,
+.address--input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.form--address--box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.form--address, .form--termin {
+    width: 48%;
+}
+
+.form--address--title {
+    font-size: 2.4rem;
+    line-height: 4.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.address--label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 2.6rem;
+    margin-bottom: 2rem;
+
+    .address--input {
+        width: 22rem;
+    }
+
+    span {
+        width: 23%;
+    }
+
+    .message--error {
+        width: 25rem;
+        margin: 0 0 0 auto;
+        text-align: center;
+    } 
+}
+
+@media #{$mobileScreen} {
+    .address--label {
+        .address--input {
+            width: 40rem;
+            margin-top: .7rem;
+        }
+
+        span {
+            width: 100%;
+        }
+    }
+
+    .form--address--box {
+        flex-wrap: wrap;
+    }
+
+    .form--body--address--info {
+        height: 125rem;
+
+        .form--body--title {
+            font-size: 2.7rem;
+        }
+    }
+
+    .form--address, .form--termin {
+        width: 95%;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 599px) {
+    .address--label {
+        .address--input {
+            width: 60%;
+            margin-top: 0;
+        }
+
+        span {
+            width: 30%;
+        }
+    }
+
+    .form--body--address--info {
+        height: 110rem;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 479px) {
+    .address--label {
+        .address--input {
+            width: 90%;
+            display: block;
+            margin-top: .7rem;
+        }
+
+        span {
+            width: 100%;
+        }
+    }
+}
+
+@media #{$mobileLargeScreen} {
+    .form--address, .form--termin {
+        width: 48%;
+    }
+
+    .address--label {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    .form--address--box {
+        width: 105%;
+    }
+}
+
+@media #{$tableScreen} {
+    .address--label {
+
+        span {
+            width: 100%;
+            display: inline-block;
+            margin-bottom: .7rem;
+        }
+    }
+}

@@ -64,3 +64,31 @@
         margin-top: 17rem;
     }
 }
+
+@media #{$mobileLargeScreen} {
+    .about--us--bg--img {
+        flex-basis: 60%;
+        height: 81rem;
+    }
+
+    .about--us--info--box {
+        flex-basis: 40%;
+        padding: 5rem 3rem 0rem 3rem;
+    }
+
+    .about--us--signature {
+        margin-top: 3rem;
+        width: 40%;
+        right: 10%;
+    }
+}
+
+@media #{$laptopScreen} {
+    .about--us--info--box {
+        padding: 9rem 4rem 2rem 4rem;
+    }
+
+    .about--us--signature {
+        margin-top: 7rem;
+    }
+}

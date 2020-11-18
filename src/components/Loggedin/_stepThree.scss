@@ -1,0 +1,148 @@
+.select--city {
+    margin: 0;
+}
+
+.checkbox--input {
+    outline: none;
+    background-color: transparent;
+    border: 0;
+    padding: 2.5rem 2.2rem;
+    width: 100%;
+    appearance: none;
+    position: relative;
+    z-index: 3;
+}
+
+.who--we--help {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 5rem;
+}
+
+.checkbox--label {
+    flex-basis: 30%;
+    height: auto;
+    margin:1.2rem 2.4rem 1.2rem 0;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.checkbox--span {
+    position: absolute;
+    font-size: 2.2rem;
+    line-height: 3.2rem;
+    width: 100%;
+    font-family: $font-base;
+    font-weight: 300;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+    text-align: center;
+    z-index: 1;
+}
+
+.who--help--title {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    font-weight: 600;
+    margin: 5rem 0 1rem 0;
+}
+
+.checkbox--input:checked ~ .checkbox--box {
+    background-color: $yellowColor;
+}
+
+.checkbox--box {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+    border: .75px solid $darkColor;
+}
+
+.location--label {
+    .address--input {
+        display: block;
+        margin-top: 2rem;
+        width: 50rem;
+    }
+}
+
+.address--input {
+    outline: none;
+    background-color: transparent;
+    border: .75px solid $darkColor;
+    padding: 1rem 1.3rem;
+}
+
+@media #{$mobileScreen} {
+    .checkbox--label {
+        margin: 1.2rem 1.6rem 1.2rem 0;
+    }
+
+    .checkbox--span {
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+        font-weight: 500;
+    }
+
+    .checkbox--input {
+        padding: 2rem 1.7rem;
+    }
+}
+
+@media (max-width: 399px) {
+    .checkbox--label {
+        flex-basis: 40%;
+    }
+
+    .city--arrow {
+        top: 2rem;
+        left: 20rem;
+    }
+
+    .select--city:focus ~ .city--arrow {
+        top: 2rem !important;
+        left: 20rem !important;
+        transform: translateY(-50%) rotate(180deg);
+    }
+
+    .location--label {
+        font-size: 2rem;
+
+        .address--input {
+            width: 90%;
+        }
+    }
+}
+
+@media (min-width: 400px) and (max-width: 479px) {
+    .checkbox--label {
+        flex-basis: 35%;
+    }
+
+    .location--label {
+        margin: 3rem 0 1rem 0;
+
+        .address--input {
+            width: 80%;
+        }
+    }
+}
+
+@media #{$mobileLargeScreen}, #{$tableScreen} {
+    .checkbox--span {
+        font-size: 1.8rem;
+        line-height: 2.3rem;
+        font-weight: 500;
+    }
+
+    .checkbox--label {
+        margin: 1.2rem 2rem 1.2rem 0;
+    }
+}

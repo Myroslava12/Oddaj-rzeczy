@@ -14,6 +14,12 @@
 @import "../components/Login/login";
 @import "../components/Logout/logout";
 @import "../components/Loggedin/loggedInForm";
+@import "../components/Loggedin/stepOne";
+@import "../components/Loggedin/stepTwo";
+@import "../components/Loggedin/stepThree";
+@import "../components/Loggedin/stepFour";
+@import "../components/Loggedin/summary";
+@import "../components/Loggedin/finish";
 
 html {
   font-size: 10px;

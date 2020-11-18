@@ -1,6 +1,6 @@
 .form--logged--in--box {
     width: 100%;
-    height: calc(100vh - 12.4rem);
+    height: calc(100vh - 15rem);
     display: flex;
     font-family: $font-base;
 }
@@ -83,369 +83,6 @@
     z-index: 3;
 }
 
-// StepOne
-
-.form--header--box {
-    width: 100%;
-    padding: 5rem 0;
-    background-color: $yellowColor;
-    font-family: $font-base;
-}
-
-.form--header--title {
-    font-size: 3.6rem;
-    line-height: 3.2rem;
-    font-weight: 600;
-    color: #000000;
-}
-
-.form--header--text {
-    font-size: 2.2rem;
-    line-height: 3rem;
-    color: $darkColor;
-}
-
-.form--body--box {
-    height: 88rem;
-    width: 100%;
-    background-image: url(../../assets//Background-Form.jpg);
-    background-size: cover;
-    background-position: center right 20%;
-
-    .container--home {
-        height: 100%;
-    }
-}
-
-.form--boby--info {
-    width: 60%;
-    height: 100%;
-    padding: 3.5rem 0 0 0;
-    position: relative;
-    box-sizing: border-box;
-
-    .form--btn {
-        bottom: 5rem;
-        position: absolute;
-    }
-}
-
-.steps--counter {
-    font-size: 2.4rem;
-    line-height: 2.7rem;
-    font-weight: 300;
-    color: $darkColor;
-}
-
-.form--body--title {
-    margin: 7rem 0 4rem 0;
-    font-size: 3.6rem;
-    line-height: 4.5rem;
-    color: #000000;
-    font-weight: 600;
-}
-
-.items--list {
-    li {
-        margin-bottom: 4.5rem;
-    }
-}
-
-.item--input[type=radio] {
-    border: .75px solid $darkColor;
-    -webkit-appearance: none;
-    width: 4rem;
-    height: 4rem;
-    margin-right: 3rem;
-    outline: none;
-
-    &:checked {
-        background-color: $yellowColor;
-    }
-}
-
-.item--label {
-    font-size: 2.4rem;
-    line-height: 3.2rem;
-    color: #000000;
-    font-weight: 300;
-    display: flex;
-    align-items: center;
-}
-
-.form--btn {
-    border: .75px solid $darkColor;
-    padding: 2.3rem 6.3rem;
-    font-size: 2.4rem;
-    color: #000000;
-    font-weight: 300;
-}
-
-// step-2
-
-.form--btn--box {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 10rem;
-    position: absolute;
-    width: 54%;
-    bottom: 5rem;
-
-    .form--btn {
-        position: static;
-    }
-}
-
-.quantity--label {
-    font-size: 2.4rem;
-    line-height: 3.2rem;
-    color: #000000;
-    font-weight: 300;
-    position: relative;
-    width: auto;
-}
-
-.quantity--select {
-    margin-left: 2.6rem; 
-    outline: none;
-    background-color: transparent;
-    border: .75px solid $darkColor;
-    padding: .8rem 1.8rem;
-    color: #000000;
-    font-weight: 300;
-    width: 25rem;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    cursor: pointer;
-}
-
-.quantity--select:focus ~ .select--arrow {
-    top: 65%;
-    transform: translateY(-50%) rotate(180deg);
-}
-
-.select--arrow {
-    position: absolute;
-    width: 4rem;
-    height: 2rem;
-    top: 65%;
-    transform: translateY(-50%);
-    right: 1rem;
-    display: block;
-    transition: .1s;
-}
-
-// step three
-
-.select--city {
-    margin: 0;
-}
-
-.checkbox--input {
-    outline: none;
-    background-color: transparent;
-    border: 0;
-    padding: 2.5rem 2.2rem;
-    width: 100%;
-    appearance: none;
-    position: relative;
-    z-index: 3;
-}
-
-.who--we--help {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    margin-bottom: 5rem;
-}
-
-.checkbox--label {
-    flex-basis: 30%;
-    height: auto;
-    margin:1.2rem 2.4rem 1.2rem 0;
-    position: relative;
-    z-index: 2;
-    cursor: pointer;
-}
-
-.checkbox--span {
-    position: absolute;
-    font-size: 2.2rem;
-    line-height: 3.2rem;
-    width: 100%;
-    font-family: $font-base;
-    font-weight: 300;
-    top: 50%;
-    transform: translateY(-50%);
-    display: inline-block;
-    text-align: center;
-    z-index: 1;
-}
-
-.who--help--title {
-    font-size: 2.4rem;
-    line-height: 3.2rem;
-    font-weight: 600;
-    margin: 5rem 0 1rem 0;
-}
-
-.checkbox--input:checked ~ .checkbox--box {
-    background-color: $yellowColor;
-}
-
-.checkbox--box {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    z-index: -1;
-    border: .75px solid $darkColor;
-}
-
-.location--label {
-
-    .address--input {
-        display: block;
-        margin-top: 2rem;
-        width: 50rem;
-    }
-}
-
-.address--input {
-    outline: none;
-    background-color: transparent;
-    border: .75px solid $darkColor;
-    padding: 1rem 1.3rem;
-}
-
-// step four
-
-.address--input::-webkit-outer-spin-button,
-.address--input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-}
-
-.form--address--box {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.form--address {
-    width: 48%;
-}
-
-.form--address--title {
-    font-size: 2.4rem;
-    line-height: 4.5rem;
-    font-weight: 600;
-    margin-bottom: 2rem;
-}
-
-.address--label {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    font-weight: 300;
-    font-size: 2rem;
-    line-height: 2.6rem;
-    margin-bottom: 2rem;
-
-    .address--input {
-        width: 22rem;
-    }
-
-    span {
-        width: 23%;
-    }
-
-    .message--error {
-        width: 25rem;
-        margin: 0 0 0 auto;
-        text-align: center;
-    } 
-}
-
-// summary
-
-.summary--title {
-    font-size: 2.4rem;
-    line-height: 3rem;
-    font-weight: 600;
-    margin-bottom: 2rem;
-}
-
-.summary--item--box {
-    margin-bottom: 2rem;
-    display: flex;
-    align-items: center;
-}
-
-.summary--img {
-    margin-right: 2rem;
-    width: 5rem;
-    height: 5rem;
-}
-
-.summary--text {
-    font-size: 2.4rem;
-    line-height: 4rem;
-}
-
-.summary--address--box {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-top: 3rem;
-}
-
-.summary--info--box {
-    flex-basis: 48%;
-}
-
-.summary--address--info {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    margin-bottom: 2rem;
-}
-
-.summary--info--text {
-    flex-basis: 48%;
-    text-align: left;
-    font-size: 2.4rem;
-    line-height: 3.2rem;
-    font-weight: 300;
-}
-
-// finish--form
-
-.finish--form--box {
-    margin: 0 auto 0 0 0;
-    width: 60%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.finish--title {
-    font-size: 4rem;
-    line-height: 5.5rem;
-    color: $darkColor;
-    font-weight: 300;
-    text-align: center;
-    margin-bottom: 2.5rem;
-    width: 80%;
-}
-
 // media query
 
 @media #{$mobileScreen} {
@@ -489,202 +126,15 @@
     .form--subtitle {
         font-size: 3.4rem;
         line-height: 4.2rem;
-    }
-
-    .form--header--box {
-        padding: 3rem 1.5rem;
-        box-sizing: border-box;
-    }
-    
-    .form--header--title {
-        font-size: 2.8rem;
-        line-height: 3rem;
-        padding-bottom: .8rem;
-    }
-    
-    .form--header--text {
-        font-size: 1.7rem;
-        line-height: 2.7rem;
-    }
-
-    .form--body--box {
-        position: relative;
-        .mobile--first--bg {
-            height: 100%;
-            width: 100%;
-        }
-    }
-
-    .form--boby--info {
-        z-index: 3;
-        padding: 3.5rem 1.5rem 0 1.5rem;
-        width: 100%;
-    }
-
-    .item--input[type=radio] {
-        min-width: 4rem;
-    }
-
-    .form--btn--box {
-        width: 61%;
-    }
-
-    .form--btn {
-        padding: 2.3rem 4rem;
-    }
-
-    .quantity--label {
-        font-size: 2rem;
-    }
-
-    .form--body--title {
-        font-size: 3.2rem;
-    }
-
-    .checkbox--label {
-        margin: 1.2rem 1.6rem 1.2rem 0;
-    }
-
-    .checkbox--span {
-        font-size: 1.6rem;
-        line-height: 2.6rem;
-        font-weight: 500;
-    }
-
-    .checkbox--input {
-        padding: 2rem 1.7rem;
-    }
-
-    .form--address--box {
-        flex-wrap: wrap;
-    }
-
-    .form--body--address--info {
-        height: 125rem;
-
-        .form--body--title {
-            font-size: 2.7rem;
-        }
-    }
-
-    .form--address, .form--termin {
-        width: 95%;
-    }
-
-    .address--label {
-        .address--input {
-            width: 40rem;
-            margin-top: .7rem;
-        }
-
-        span {
-            width: 100%;
-        }
-    }
-
-    .form--body--summary--info {
-        height: 100rem;
-
-        .form--btn--box {
-            width: 80%;
-        }
-    }
-
-    .summary--address--box {
-        flex-wrap: wrap; 
-    }
-
-    .summary--info--box {
-        flex-basis: 80%;
-    }
-
-    .summary--info--text {
-        font-size: 2rem;
-        line-height: 2.8rem;
-    }
-
-    .summary--text {
-        font-size: 2.2rem;
-    }
-
-    .summary--info--user {
-        font-weight: 600;
-    }
-
-    .finish--form--box {
-        position: relative;
-        z-index: 3;
-        width: 100%;
-    }
-
-    .finish--title {
-        font-size: 3.2rem;
-    }
+    } 
 }
 
-@media (min-width: 480px) and (max-width: 599px) {
-    .address--label {
-        .address--input {
-            width: 60%;
-            margin-top: 0;
-        }
 
-        span {
-            width: 30%;
-        }
-    }
-
-    .form--body--address--info {
-        height: 110rem;
-    }
-}
 
 @media (max-width: 399px) {
     .form--square {
         width: 7.5rem;
         height: 7.5rem;
-    }
-
-    .checkbox--label {
-        flex-basis: 40%;
-    }
-
-    .quantity--select {
-        margin: 1rem 0 0 0;
-        display: block;
-    }
-
-    .select--arrow {
-        top: 5.9rem;
-        right: -7rem;
-    }
-
-    .city--arrow {
-        top: 2rem;
-        left: 20rem;
-    }
-
-    .select--city:focus ~ .city--arrow {
-        top: 2rem !important;
-        left: 20rem !important;
-        transform: translateY(-50%) rotate(180deg);
-    }
-
-    .quantity--select:focus ~ .select--arrow {
-        top: 5.9rem;
-        right: -7rem;
-        transform: translateY(-50%) rotate(180deg);
-    }
-
-    .item--label {
-        font-size: 2rem;
-        line-height: 2.4rem;
-        width: 100%;
-    }
-
-    .form--body--title {
-        font-size: 3rem;
-        margin: 5rem 0 3rem 0;
     }
 
     .square--title {
@@ -702,69 +152,13 @@
         font-size: 3rem;
         line-height: 4rem;
     }
-
-    .form--btn--box {
-        width: 76%;
-    }
-
-    .location--label {
-        font-size: 2rem;
-
-        .address--input {
-            width: 90%;
-        }
-    }
-
-    .form--body--summary--info {
-        height: 110rem;
-
-        .form--btn--box {
-            width: 90%;
-        }
-    }
-
-    .form--btn {
-        padding: 2rem 3rem;
-    }
-
-    .summary--info--box {
-        flex-basis: 100%;
-    }
 }
 
 @media (min-width: 400px) and (max-width: 479px) {
     .form--square {
         width: 9rem;
         height: 9rem;
-    }
-
-    .checkbox--label {
-        flex-basis: 35%;
-    }
-
-    .form--body--title {
-        margin: 4rem 0 4rem 0;
-    }
-
-    .location--label {
-        margin: 3rem 0 1rem 0;
-
-        .address--input {
-            width: 80%;
-        }
-    }
-
-    .address--label {
-        .address--input {
-            width: 90%;
-            display: block;
-            margin-top: .7rem;
-        }
-
-        span {
-            width: 100%;
-        }
-    }
+    }  
 }
 
 @media (max-width: 350px) {
@@ -773,23 +167,87 @@
     }
 }
 
+@media #{$tableScreen}, #{$mobileLargeScreen}, #{$laptopScreen} {
+    .form--description--box {
+        padding-right: 1.5rem;
+    }
+}
+
+
+@media #{$tableScreen} {
+    .form--square {
+        width: 10rem;
+        height: 10rem;
+        
+        span {
+            line-height: 2.4rem;
+        }
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1024px) {
+    .form--square {
+        width: 12rem;
+        height: 12rem;
+    }
+}
+
 @media #{$mobileLargeScreen} {
-    .form--header--box {
-        padding: 5rem 1.5rem;
-        box-sizing: border-box;
+    .form--btn--box {
+        width: 77%;
+    }
+    
+    .form--description--box {
+        width: 60%;
+        z-index: 3;
+    }
+    
+    .form--square {
+        width: 10rem;
+        height: 10rem;
+        
+        span {
+            line-height: 2rem;
+            font-weight: 600;
+        }
+    }
+    
+    .square--title {
+        font-size: 1.8rem;
+    }
+    
+    .square--number {
+        font-size: 2.4rem;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 800px) {
+    .form--square--box {
+        width: 84%;
+    }
+}
+
+@media #{$tableScreen}, #{$mobileLargeScreen} {
+    .form--logged--in--box {
+        height: calc(100vh - 10.5rem);
+    }
+
+    .form--square--box {
+        width: 100%;
     }
 
     .form--body--box {
-        padding: 0 1.5rem;
-    }
-
-    .form--btn--box {
-        width: 77%;
+        .mobile--first--bg {
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
     }
 
     .section--form {
         .mobile--first--bg {
-            opacity: .85;
+            opacity: .6;
         }
     }
 }

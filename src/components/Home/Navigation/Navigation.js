@@ -39,6 +39,7 @@ const Navigation = () => {
                         email={userLoggedIn.email} 
                         firebase={firebase} 
                         isVisible={isVisible}
+                        fn={onClick}
                     /> : <NavigationNonAuth isVisible={isVisible} />}
                 </ul>
                 {userLoggedIn && <p className="user--email--text">Cześć {userLoggedIn.email}</p>}
@@ -63,7 +64,7 @@ const NavigationNonAuth = ({isVisible}) => {
     )
 }
 
-export const NavigationAuth = ({email, firebase, isVisible}) => {
+export const NavigationAuth = ({email, firebase, isVisible, fn}) => {
     const onClick = firebase.doSignOut;
     
     return (
@@ -71,7 +72,7 @@ export const NavigationAuth = ({email, firebase, isVisible}) => {
             "active": isVisible,
         })}>
             <p className="user--email--text">Cześć {email}</p>
-            <li><NavLink exact to={ROUTES.FORM} className="link--auth link--auth--active navbar--link">Oddaj rzeczy</NavLink></li>
+            <li onClick={fn}><NavLink exact to={ROUTES.FORM} className="link--auth link--auth--active navbar--link">Oddaj rzeczy</NavLink></li>
             <li onClick={onClick}><NavLink exact to={ROUTES.LOG_OUT} className="link--auth navbar--link">Wyloguj</NavLink></li>
         </ul>
     )
