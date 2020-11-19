@@ -117,14 +117,6 @@
         line-height: 2.7rem;
     }
 
-    .form--body--box {
-        position: relative;
-        .mobile--first--bg {
-            height: 100%;
-            width: 100%;
-        }
-    }
-
     .form--boby--info {
         z-index: 3;
         padding: 3.5rem 1.5rem 0 1.5rem;
@@ -137,6 +129,16 @@
 
     .form--body--title {
         font-size: 3.2rem;
+    }
+}
+
+@media #{$mobileScreen}, #{$mobileLargeScreen} {
+    .form--body--box {
+        position: relative;
+        .mobile--first--bg {
+            height: 100%;
+            width: 100%;
+        }
     }
 }
 
@@ -170,7 +172,6 @@
     }
 
     .form--body--box {
-        position: relative;
         .mobile--first--bg {
             opacity: .7;
         }
