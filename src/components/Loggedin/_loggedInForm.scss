@@ -1,3 +1,9 @@
+.section--form {
+    .container--home {
+        width: 100%;
+    }
+}
+
 .form--logged--in--box {
     width: 100%;
     height: calc(100vh - 18rem);
@@ -6,11 +12,10 @@
 }
 
 .form--bg {
+    @include bgImg;
     width: 50%;
     height: 100vh;
     background-image: url(../../assets/Form-Hero-Image.jpg);
-    background-position: center;
-    background-size: cover;
     position: absolute;
     top: 0;
     left: 0;
@@ -18,20 +23,17 @@
 }
 
 .form--description--box {
+    @include flexCenter;
     text-align: center;
     width: 50%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     margin: 0 0 0 auto;
     color: $darkColor;
 }
 
 .form--logged--in--title {
-    font-size: 3.8rem;
-    line-height: 5.5rem;
+    @include titleSize;
 }
 
 .form--logged--in--img {
@@ -53,14 +55,12 @@
 }
 
 .form--square {
+    @include flexCenter;
     width: 13rem;
     height: 13rem;
     border: .75px solid $darkColor;
     transform: rotate(45deg);
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
     span {
         display: inline-block;
@@ -89,12 +89,16 @@
     .form--logged--in--box {
         height: calc(100vh - 10.5rem);
         flex-wrap: wrap;
+
+        .mobile--first--bg {
+            @include positionSize;
+            height: 100vh;
+            opacity: .85;
+        }
     }
 
     .section--form {
-        .mobile--first--bg {
-            opacity: .85;
-        }
+        position: relative;
     }
 
     .form--bg {
@@ -128,8 +132,6 @@
         line-height: 4.2rem;
     } 
 }
-
-
 
 @media (max-width: 399px) {
     .form--square {
@@ -169,7 +171,7 @@
 
 @media #{$tableScreen}, #{$mobileLargeScreen}, #{$laptopScreen} {
     .form--description--box {
-        padding-right: 1.5rem;
+        @include containerPadding;
     }
 }
 
@@ -182,6 +184,12 @@
         span {
             line-height: 2.4rem;
         }
+    }
+}
+
+@media #{$tableScreen}, #{$mobileLargeScreen} {
+    .form--logged--in--box {
+        height: calc(100vh - 10.5rem);
     }
 }
 
@@ -211,6 +219,20 @@
             font-weight: 600;
         }
     }
+
+    .form--body--box {
+        .mobile--first--bg {
+            @include positionSize;
+            height: 100vh;
+        }
+    }
+
+    .section--form {
+        .mobile--first--bg {
+            @include positionSize;
+            opacity: .6;
+        }
+    }
     
     .square--title {
         font-size: 1.8rem;
@@ -227,27 +249,14 @@
     }
 }
 
-@media #{$tableScreen}, #{$mobileLargeScreen} {
-    .form--logged--in--box {
-        height: calc(100vh - 10.5rem);
-    }
-
+@media #{$mobileLargeScreen} {
     .form--square--box {
         width: 100%;
     }
+}
 
-    .form--body--box {
-        .mobile--first--bg {
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-        }
-    }
-
-    .section--form {
-        .mobile--first--bg {
-            opacity: .6;
-        }
+@media #{$laptopScreen} {
+    .form--logged--in--box {
+        height: calc(100vh - 15rem);
     }
 }

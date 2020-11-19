@@ -14,8 +14,7 @@
 }
 
 .about--us--title {
-    font-size: 3.8rem;
-    line-height: 5.5rem;
+    @include titleSize;
     text-transform: uppercase;
 }
 
@@ -35,11 +34,10 @@
 }
 
 .about--us--bg--img {
+    @include bgImg;
     flex-basis: 50%;
     height: 93rem;
     background-image: url(../../../assets/People.jpg);
-    background-size: cover;
-    background-position: center;
 }
 
 @media #{$mobileScreen} {
@@ -83,7 +81,7 @@
     }
 }
 
-@media #{$laptopScreen} {
+@media #{$laptopScreen}, #{$tableScreen} {
     .about--us--info--box {
         padding: 9rem 4rem 2rem 4rem;
     }

@@ -1,0 +1,40 @@
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin titleSize {
+    font-size: 3.8rem;
+    line-height: 5.5rem;
+    color: $darkColor;
+}
+
+@mixin  containerPadding {
+    padding: 1.5rem;
+    box-sizing: border-box;
+}
+
+@mixin flexBetween {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin  bgImg {
+    background-position: center;
+    background-size: cover;
+}
+
+@mixin smallTitleSize {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    color: $darkColor;
+}
+
+@mixin  positionSize {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}

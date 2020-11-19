@@ -1,17 +1,13 @@
 .log--out--box {
+    @include flexCenter;
     width: 100%;
     height: calc(100vh - 12.4rem);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     font-family: $font-base;
 }
 
 .log--out--title {
-    font-size: 4rem;
-    line-height: 5.5rem;
-    color: $darkColor;
+    @include titleSize;
     width: 40%;
     text-align: center;
 }
@@ -29,7 +25,7 @@
     a {
         text-decoration: none;
         font-size: 1.8rem;
-        color: #000000;
+        color: $blackColor;
         font-weight: 300;
     }
 }

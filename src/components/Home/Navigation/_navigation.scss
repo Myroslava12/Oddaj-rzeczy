@@ -11,13 +11,10 @@
 }
 
 .nav--links {
-    display: flex;
-    justify-content: space-between;
+    @include flexBetween;
 
     li {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexCenter;
     }
 }
 
@@ -35,11 +32,9 @@
 }
 
 .link--home {
+    @include smallTitleSize;
     margin-left: 5rem;
     padding: .5rem;
-    font-size: 1.8rem;
-    line-height: 2.4rem;
-    color: $darkColor;
     cursor: pointer;
     text-decoration: none;
 }
@@ -52,7 +47,7 @@
 .user--email--text {
     font-size: 1.4rem;
     line-height: 8.5rem;
-    color: #000000;
+    color: $blackColor;;
     z-index: 3;
     font-family: $font-base;
 }
@@ -122,16 +117,10 @@
 }
 
 .navbar--active {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    @include positionSize;
+    @include flexCenter;
     z-index: 100;
     background-color: $whiteColor;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
 
     .navbar--link {
@@ -195,7 +184,10 @@
 
 @media #{$laptopScreen} {
     .nav--box {
-        padding-right: 1.5rem;
-        box-sizing: border-box;
+        @include containerPadding;
+    }
+
+    .link--home {
+        margin-left: 3rem;
     }
 }

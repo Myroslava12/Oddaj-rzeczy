@@ -23,8 +23,7 @@
 }
 
 .summary--address--box {
-    display: flex;
-    justify-content: space-between;
+    @include flexBetween;
     align-items: flex-start;
     margin-top: 3rem;
 }
@@ -34,9 +33,8 @@
 }
 
 .summary--address--info {
-    display: flex;
+    @include flexBetween;
     align-items: center;
-    justify-content: space-between;
     width: 100%;
     margin-bottom: 2rem;
 }

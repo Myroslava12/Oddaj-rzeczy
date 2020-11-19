@@ -1,15 +1,13 @@
 .section--three--columns {
+    @include bgImg;
     width: 100%;
     background-image: url(../../../assets/bg-3-columns.png);
-    background-position: center;
-    background-size: cover;
     position: relative;
     z-index: 6;
 
     .container--home {
+        @include flexBetween;
         width: 100%;
-        display: flex;
-        justify-content: space-between;
         align-items: center;
     }
 }
@@ -62,7 +60,6 @@
 
 @media #{$mobileLargeScreen}, #{$laptopScreen}  {
     .section--three--columns {
-        padding: 0 1.5rem;
-        box-sizing: border-box;
+        @include containerPadding;
     }
 }

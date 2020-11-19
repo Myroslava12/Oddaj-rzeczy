@@ -41,10 +41,10 @@ const LoggedInForm = () => {
 
     return (
         <section className="section--form">
-            <div className="mobile--first--bg"></div>
             <div className="container--home">
                 <Navigation />
                 <div className="form--logged--in--box">
+                    <div className="mobile--first--bg"></div>
                     <div className="form--bg"></div>
                     <div className="form--description--box">
                         <h2 className="form--logged--in--title">Oddaj rzeczy, których już nie chcesz POTRZEBUJĄCYM</h2>

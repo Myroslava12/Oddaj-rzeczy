@@ -56,11 +56,7 @@
 }
 
 .checkbox--box {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    position: absolute;
+    @include positionSize;
     z-index: -1;
     border: .75px solid $darkColor;
 }
@@ -137,8 +133,7 @@
 
 @media #{$mobileLargeScreen}, #{$tableScreen} {
     .checkbox--span {
-        font-size: 1.8rem;
-        line-height: 2.3rem;
+        @include smallTitleSize;
         font-weight: 500;
     }
 

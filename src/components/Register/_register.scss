@@ -8,13 +8,11 @@
 }
 
 .form--login--box {
+    @include flexCenter;
     width: 100%;
     height: calc(100vh - 12.4rem);
     text-align: center;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .form--title {
@@ -46,7 +44,7 @@
     outline: none;
     border: 0;
     background-color: transparent;
-    border-bottom: 1px solid #707070;
+    border-bottom: 1px solid $borderColor;
     padding: 1rem 0rem;
 }
 
@@ -61,8 +59,7 @@
 
 .login--form--btn--box {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    @include flexBetween;
     align-items: center;
     margin-top: 4rem;
 }
@@ -70,7 +67,7 @@
 .form--login--btn {
     font-size: 1.8rem;
     line-height: 3.2rem;
-    color: #000000;
+    color: $blackColor;
     font-weight: 300;
     border: .75px solid $darkColor;
     padding: 1.2rem 1.3rem;
@@ -82,7 +79,7 @@
     font-size: 1.8rem;
     line-height: 3.2rem;
     font-weight: 300;
-    color: #000000;
+    color: $blackColor;
     text-decoration: none;
 }
 

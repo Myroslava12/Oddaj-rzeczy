@@ -1,17 +1,13 @@
 .finish--form--box {
+    @include flexCenter;
     margin: 0 auto 0 0 0;
     width: 60%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
 }
 
 .finish--title {
-    font-size: 4rem;
-    line-height: 5.5rem;
-    color: $darkColor;
+    @include titleSize;
     font-weight: 300;
     text-align: center;
     margin-bottom: 2.5rem;

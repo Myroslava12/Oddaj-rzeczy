@@ -1,7 +1,6 @@
 .form--btn--box {
-    display: flex;
+    @include flexBetween;
     align-items: center;
-    justify-content: space-between;
     height: 10rem;
     position: absolute;
     width: 54%;
@@ -15,7 +14,7 @@
 .quantity--label {
     font-size: 2.4rem;
     line-height: 3.2rem;
-    color: #000000;
+    color: $blackColor;
     font-weight: 300;
     position: relative;
     width: auto;
@@ -27,7 +26,7 @@
     background-color: transparent;
     border: .75px solid $darkColor;
     padding: .8rem 1.8rem;
-    color: #000000;
+    color: $blackColor;
     font-weight: 300;
     width: 25rem;
     -webkit-appearance: none;

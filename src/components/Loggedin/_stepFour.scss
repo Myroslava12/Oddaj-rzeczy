@@ -4,8 +4,7 @@
 }
 
 .form--address--box {
-    display: flex;
-    justify-content: space-between;
+    @include flexBetween;
     align-items: flex-start;
 }
 
@@ -21,8 +20,7 @@
 }
 
 .address--label {
-    display: flex;
-    justify-content: space-between;
+    @include flexBetween;
     align-items: center;
     flex-wrap: wrap;
     font-weight: 300;

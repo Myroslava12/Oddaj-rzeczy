@@ -11,9 +11,7 @@
 }
 
 .four--steps--title {
-    font-size: 3.8rem;
-    line-height: 5.5rem;
-    color: $darkColor;
+    @include titleSize;
     margin-bottom: 2.4rem;
 }
 
@@ -26,20 +24,10 @@
     justify-content: space-evenly;
     padding: 6.2rem 0 7.3rem 0;
 
-    .first--img {
-        background-image: url(../../../assets/Icon-1.svg);
-    }
-
-    .second--img {
-        background-image: url(../../../assets/Icon-2.svg);
-    }
-
-    .third--img {
-        background-image: url(../../../assets/Icon-3.svg);
-    }
-
-    .fourth--img {
-        background-image: url(../../../assets/Icon-4.svg);
+    @for $i from 1 through 4 {
+        .img--#{$i} {
+            background-image: url(../../../assets/Icon-#{$i}.svg);
+        }
     }
 }
 
@@ -48,18 +36,15 @@
 }
 
 .one--step--img {
+    @include bgImg;
     width: 8.3rem;
     height: 8.3rem;
-    background-position: center;
-    background-size: cover;
     margin: 0 auto;
 }
 
 .one--step--title {
+    @include smallTitleSize;
     margin: 1rem 0 3rem 0;
-    font-size: 1.8rem;
-    line-height: 2.4rem;
-    color: $darkColor;
     height: 3.4rem;
 
     
@@ -80,7 +65,7 @@
         width: 7rem;
         height: 1px;
         margin-bottom: 1rem;
-        background-color: #707070;
+        background-color: $borderColor;
         top: -1rem;
         left: 50%;
         transform: translateX(-50%);
@@ -127,7 +112,8 @@
     }
 
     .four--steps--box {
-        padding: 6.2rem 1.5rem 7.3rem 1.5rem;
-        box-sizing: border-box;
+        @include containerPadding;
+        padding-top: 6.2rem;
+        padding-bottom: 7.3rem;
     }
 }

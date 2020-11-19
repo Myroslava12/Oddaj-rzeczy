@@ -12,9 +12,7 @@
 }
 
 .we--help--title {
-    font-size: 3.8rem;
-    line-height: 5.5rem;
-    color: $darkColor;
+    @include titleSize;
 }
 
 .we--help--img {
@@ -61,13 +59,12 @@
 }
 
 .organization--title--box {
-    border-bottom: 1px solid #707070;
+    @include flexBetween;
+    border-bottom: 1px solid $borderColor;
     padding-bottom: 2.8rem;
     margin-bottom: 3.4rem;
     width: 100%;
     color: $darkColor;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -82,8 +79,7 @@
 }
 
 .organization--description, .organization--subheader {
-    font-size: 1.8rem;
-    line-height: 2.2rem;
+    @include smallTitleSize;
     font-family: $font-alt;
     font-weight: 300;
 }
@@ -117,10 +113,9 @@
     }
 
     .we--help--btn {
+        @include smallTitleSize;
         width: 32%;
         padding: 1.1rem 1.5rem;
-        font-size: 1.9rem;
-        line-height: 2.4rem;
     }
 
     .we--help--text {
@@ -194,9 +189,10 @@
     }
 
     .organizations--items--box {
+        @include containerPadding;
         width: 100%;
-        padding: 0 1.5rem;
-        box-sizing: border-box;
+        padding-top: 0;
+        padding-bottom: 0;
     }
 }
 
