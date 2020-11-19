@@ -86,7 +86,7 @@
 
         .mobile--first--bg {
             @include positionSize;
-            height: 100%;
+            height: 100vh;
             opacity: .85;
         }
     }
@@ -213,7 +213,7 @@
     .form--body--box {
         .mobile--first--bg {
             @include positionSize;
-            height: 100vh;
+            height: 100%;
         }
     }
 
