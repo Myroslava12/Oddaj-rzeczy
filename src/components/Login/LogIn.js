@@ -7,6 +7,7 @@ import * as ROUTES from '../../constants/routes';
 import {FirebaseContext} from "../Firebase";
 import { withFirebase } from '../Firebase';
 import cx from "classnames";
+import * as Yup from "yup";
 
 const LogIn = () => {
     return (
@@ -27,30 +28,21 @@ const LoginFormBase = () => {
     const firebase = useContext(FirebaseContext);
     const history = useHistory();
 
-    const validate = values => {
-        const errors = {};
-
-        if (!values.email) {
-            errors.error = "Pola nie mogą być puste";
-        } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-            errors.email = "Podany email jest niepoprawny!";
-        }
-
-        if (!values.password) {
-            errors.error = 'Pola nie mogą być puste';
-        } else if (values.password.length < 6) {
-            errors.password = "Podane hasło jest za krótkie!";
-        }
-
-        return errors;
-    }
+    const validationSchema = Yup.object().shape({
+        email: Yup.string()
+            .email("Wpish poprawnie swój adres mailowy")
+            .required("Podaj swój adres mailowy"),
+        password: Yup.string()
+            .min(6, "Podane hasło jest za krótkie!")
+            .required('Wpisz hasło')
+    })
  
     const formik = useFormik({
         initialValues: {
             email: '',
             password: '',
         },
-        validate,
+        validationSchema,
         onSubmit: async (values) => {
             firebase
                 .doSignInWithEmailAndPassword(values.email, values.password)

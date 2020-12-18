@@ -7,6 +7,7 @@ import * as ROUTES from '../../constants/routes';
 import {FirebaseContext} from "../Firebase";
 import { withFirebase } from '../Firebase';
 import cx from "classnames";
+import * as Yup from "yup";
 
 const Register = () => {
     return (
@@ -28,31 +29,17 @@ const RegisterFormBase = () => {
     const history = useHistory();
     const [error, setError] = useState(false);
 
-    const validate = values => {
-        const errors = {};
-
-        if (!values.email) {
-            errors.error = "Pola nie mogą być puste";
-        } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-            errors.email = "Podany email jest niepoprawny!";
-        }
-
-        if (!values.passwordOne) {
-            errors.error = 'Pola nie mogą być puste';
-        } else if (values.passwordOne.length < 6) {
-            errors.passwordOne = "Hasło powinno zawierać 6 znaków!";
-        }
-
-        if (!values.passwordTwo) {
-            errors.error = 'Pola nie mogą być puste';
-        } else if (values.passwordTwo.length < 6) {
-            errors.passwordTwo = "Hasło nie jest poprawne!";
-        } else if (values.passwordOne !== values.passwordTwo) {
-            errors.password = "Hasła nie są jednakowe"
-        }
-
-        return errors;
-    }
+    const validationSchema = Yup.object().shape({
+        email: Yup.string()
+            .email("Wpish poprawnie swój adres mailowy")
+            .required("Podaj swój adres mailowy"),
+        passwordOne: Yup.string()
+            .min(6, "Podane hasło jest za krótkie!")
+            .required('Wpisz hasło'),
+        passwordTwo: Yup.string()
+            .oneOf([Yup.ref("passwordOne"), null], "Hasła nie są jednakowe")
+            .required("Powtórz hasło")
+    })
 
     const formik = useFormik({
         initialValues: {
@@ -60,7 +47,7 @@ const RegisterFormBase = () => {
             passwordOne: '',
             passwordTwo: '',
         },
-        validate,
+        validationSchema,
         onSubmit: (values, event) => {
             firebase
                 .doCreateUserWithEmailAndPassword(values.email, values.passwordOne)
